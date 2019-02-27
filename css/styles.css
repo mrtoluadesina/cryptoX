@@ -1,0 +1,336 @@
+@font-face {
+  font-family: SpeakOT;
+  src: url(../fonts/SpeakOT-Regular.otf);
+}
+@font-face {
+  font-family: SpeakOT-Bold;
+  src: url(../fonts/SpeakOT-Bold.otf);
+}
+@font-face {
+  font-family: Calibri;
+  src: url(../fonts/Calibri.ttf);
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  font-family: "SpeakOT", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: #fcfcfc;
+  letter-spacing: .05rem;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #604684;
+}
+a:hover {
+  text-decoration: underline;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 0 1.5rem;
+}
+header > a:hover {
+  text-decoration: none
+}
+header span.logo,
+footer span.logo {
+  font-size: 30px;
+  font-family: SpeakOT;
+  background: #604684;
+  color: #fff;
+  padding: .2rem .8rem;
+  border-radius: 100%;
+  text-align: center;
+  font-weight: 800;
+}
+header span.logo-text {
+  font-size: 24px;
+}
+header ul.nav {
+  display: flex;
+  list-style: none;
+}
+header ul.nav li {
+  padding: 0 .7rem;
+}
+.hideMobile {
+  display: none;
+}
+.hideDesktop {
+  display: flex;
+}
+section {
+  display: flex;
+  flex-direction: column;
+}
+section .banner {
+  background: #f8f7f2;
+  width: 100%;
+  height: 70vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+section .banner .hero-xchange {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+section .reasons {
+  background: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+section .reasons h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+section .reasons .reason-list {
+  display: flex;
+  flex-direction: column;
+}
+section .reasons .reason-list .list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .reasons .reason-list .list-item img {
+  margin-right: 1rem;
+}
+.half {
+  width: 100%;
+  padding: 5rem 3rem;
+}
+.half.login-bg {
+  display: none;
+}
+.half:last-of-type {
+  padding: 5rem 1.5rem;
+}
+.half table {
+  width: 100%;
+  text-align: left;
+}
+tr, th, td {
+  border: 1px solid #111;
+  padding: .19rem;
+}
+table thead {
+  background: #111;
+  color: #fff;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+.half form {
+  text-align: center;
+  width: 100%;
+}
+.banner form input, .banner form select, 
+.half form input, .half form select {
+  height: 2.5rem;
+  font-size: .8rem;
+  margin: .5rem 0;
+  padding: .2rem .5rem;
+  border-radius: .25rem;
+  border: 1px solid #ccc;
+}
+.half form input[type='submit'],
+.banner form input[type='submit'] {
+  background: #604684;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+span.small-p {
+  font-size: 12px;
+}
+/* Footer */
+footer {
+  width: 100%;
+  background: #141414;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2.4375rem;
+  padding-bottom: 2.4375rem;
+  display: grid;
+  grid-template-columns: auto;
+}
+.footer-bio {
+  margin-bottom: 2.0625rem;
+  max-width: unset;
+}
+.p-footer {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.875rem;
+  margin-bottom: 0.875rem;
+  margin-top: 0.875rem;
+  font-weight: normal;
+}
+.p-footer a {
+  color: #604684;
+}
+.footer-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.p-footer-menu-title {
+  color: #FFFFFF;
+  font-size: 1rem;
+  margin-bottom: 0.875rem;
+  font-weight: normal;
+  letter-spacing: .1rem;
+}
+p.social-menu a {
+  color: #ffffff;
+  padding-right: 1.5rem;
+}
+p.social-menu a i {
+  font-size: 24px;
+}
+.footer-menu div ul {
+  font-size: .9rem;
+  line-height: 1.5;
+  color: #000;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+.footer-menu div ul li {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.footer-menu div ul li a {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.875rem;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  text-decoration: none;
+}
+/* End Footer */
+@media screen and (min-width: 480px) {
+  .wrapper {
+    flex-direction: row;
+    height: 100vh;
+  }
+  header {
+    padding: 0 7.5rem;
+  }
+  .hideMobile {
+    display: unset;
+  }
+  .hideDesktop {
+    display: none;
+  }
+  .dashboard header {
+    position: fixed;
+    width: 100%;
+    padding: 0 1.5rem;
+    z-index: 999;
+    background: #fff;
+    border-bottom: 1px solid #f8f7f2;
+  }
+  section .banner {
+    background: url('../img/hero-banner.jpg') no-repeat;
+    padding: 4rem 7.5rem;
+    height: 90vh;
+    align-items: center;
+  }
+  section .reasons {
+    padding: 4rem 7.5rem;
+  }
+  section .banner .hero-xchange, 
+  section .reasons .reason-list {
+    flex-direction: row;
+  }
+  .half {
+    width: 50%;
+    padding: 8rem;
+  }
+  .half:first-of-type {
+    border-right: 1px solid #ccc;
+    border-bottom: 0;
+  }
+  .half:last-of-type {
+    padding: 5rem;
+    overflow-y: auto;
+  }
+  .half.login-bg {
+    display: flex;
+    background: url('../img/login-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: top right; 
+  }
+  footer {
+    grid-template-columns: 1.8fr 1fr;
+    padding: 5rem 7.5rem;
+  }
+  .p-footer {
+      font-size: 1rem;
+      letter-spacing: .05rem
+  }
+  .aside {
+    background: #1f142f;
+    width: 20%;
+    border-right: 1px solid #f8f7f2;
+    height: 90vh;
+    position: fixed;
+    top: 10vh;
+  }
+  .aside ul {
+    list-style: none;
+    padding-top: 1rem;
+  }
+  .aside ul li {
+    padding: 1.5rem;
+  }
+  .aside ul li:hover {
+    cursor: pointer; 
+    background: #fff3;
+  }
+  .aside ul li a {
+    color: #fff;
+  }
+  .aside ul li a:hover {
+    text-decoration: none;
+  }
+  .aside ul li:last-child {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff3;
+  }
+
+  .aside ul li a i {
+    margin-right: 1rem;
+  }
+  .main-content {
+    width: 80%;
+    position: relative;
+    left: 20%;
+    padding: 2.5rem 1rem;
+  }
+}
