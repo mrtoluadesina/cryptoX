@@ -5,32 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Simplest way to exchange cryptocurrecy - Decachain</title>
-  <link rel="shortcut icon" href="./img/fast.jpg">
+  <link rel="shortcut icon" href="./img/favicon.png">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <header class="header">
-    <a href="/">
+    <a href="javascript:void()">
       <span class="logo">d</span> <span class="logo-text">decachain</span>
     </a>
     <ul class="nav">
-      <li class="hideMobile"><a href="file:///Users/user/Documents/bootcamp/decachain/login.html">Login</a></li>
-      <li><a href="file:///Users/user/Documents/bootcamp/decachain/register.html">Get Started</a></li>
+      <li class="hideMobile"><a href="./login.html">Login</a></li>
+      <li><a href="./register.html">Get Started</a></li>
     </ul>
   </header>
   <section id="main">
-    <div class="banner">
+    <div class="banner home-form">
       <h1>Best CryptoCurrency Platform</h1>
       <p>We have built the most seamless cryptocurrecy exchange system in the world.</p>
-      <form class="hero-xchange">
-        <select name="level" id="level">
+      <form id="homeForm" class="hero-xchange">
+        <select name="currency" id="currency">
           <option value="">Select Currency</option>
-          <option value='bitcoin'>BitCoin</option>
-          <option value='etherium'>Etherium</option>
+          <option value='Bitcoin'>BitCoin</option>
+          <option value='Etherium'>Etherium</option>
         </select>
-        <input type="text" id="amount" value="" placeholder="Amount">
+        <input type="text" id="amount" value="" placeholder="Amount in Naira">
         <input type="submit" id="submit" value="Get Started">
       </form>
+    </div>
+    <div class="reasons">
+      <h1>Why Choose Decachain</h1>
+      <div class="reason-list">
+        <div class="list-item">
+          <img src="./img/fast.jpg" alt="fast icon">
+          <span>
+              Get your money to family and friends in minutes
+          </span>
+        </div>
+        <div class="list-item">
+          <img src="./img/simple.jpg" alt="simple icon">
+          <span>
+              It’s easy to use and we’re here to help round the clock
+          </span>
+        </div>
+        <div class="list-item">
+          <img src="./img/trusted.jpg" alt="trusted icon">
+          <span>
+              Believe the hype: 85,000+ 5 star reviews
+          </span>
+        </div>
+      </div>
     </div>
     <div class="reasons">
       <h1>Why Choose Decachain</h1>
@@ -91,6 +114,6 @@
   </footer>
   <!-- <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script type="text/javascript"  src="./js/jquery.js"></script>
-  <script type="text/javascript"  src="./js/custom.js"></script>
+  <script type="text/javascript"  src="./js/index.js"></script>
 </body>
 </html>
