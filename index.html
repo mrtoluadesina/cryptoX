@@ -5,30 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Simplest way to exchange cryptocurrecy - Decachain</title>
-  <link rel="shortcut icon" href="./img/fast.jpg">
+  <link rel="shortcut icon" href="./img/favicon.png">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <header class="header">
-    <a href="/">
+    <a href="javascript:void()">
       <span class="logo">d</span> <span class="logo-text">decachain</span>
     </a>
     <ul class="nav">
-      <li class="hideMobile"><a href="file:///Users/user/Documents/bootcamp/decachain/login.html">Login</a></li>
-      <li><a href="file:///Users/user/Documents/bootcamp/decachain/register.html">Get Started</a></li>
+      <li class="hideMobile"><a href="./login.html">Login</a></li>
+      <li><a href="./register.html">Get Started</a></li>
     </ul>
   </header>
   <section id="main">
-    <div class="banner">
+    <div class="banner home-form">
       <h1>Best CryptoCurrency Platform</h1>
       <p>We have built the most seamless cryptocurrecy exchange system in the world.</p>
-      <form class="hero-xchange">
-        <select name="level" id="level">
+      <form id="homeForm" class="hero-xchange">
+        <select name="currency" id="currency">
           <option value="">Select Currency</option>
-          <option value='bitcoin'>BitCoin</option>
-          <option value='etherium'>Etherium</option>
+          <option value='Bitcoin'>BitCoin</option>
+          <option value='Etherium'>Etherium</option>
         </select>
-        <input type="text" id="amount" value="" placeholder="Amount">
+        <input type="text" id="amount" value="" placeholder="Amount in Naira">
         <input type="submit" id="submit" value="Get Started">
       </form>
     </div>
@@ -54,6 +54,12 @@
           </span>
         </div>
       </div>
+    </div>
+    <div class="cta">
+      <h1>You Smile when you use Decachain</h1>
+      <span>
+          we are the simplest way to exchange cryptocurrecy in Nigeria.
+      </span>
     </div>
   </section>
   <footer>
@@ -82,8 +88,8 @@
         <div>
             <p class="p-footer-menu-title">Discover</p>
             <ul>
-                <li><a href="/">Browse Events</a></li>
-                <li><a href="/">List Event</a></li>
+                <li><a href="/">Get Started</a></li>
+                <li><a href="/">Exchange</a></li>
                 <li><a href="/">Frequently Asked Questions</a></li>
             </ul>
         </div>
@@ -91,6 +97,6 @@
   </footer>
   <!-- <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script type="text/javascript"  src="./js/jquery.js"></script>
-  <script type="text/javascript"  src="./js/custom.js"></script>
+  <script type="text/javascript"  src="./js/index.js"></script>
 </body>
 </html>

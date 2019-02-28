@@ -99,7 +99,8 @@ section .reasons {
 }
 section .reasons h1 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 30px;
 }
 section .reasons .reason-list {
   display: flex;
@@ -112,6 +113,16 @@ section .reasons .reason-list .list-item {
 }
 section .reasons .reason-list .list-item img {
   margin-right: 1rem;
+}
+section .cta {
+  background: url('../img/cta-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 4rem 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 .half {
   width: 100%;
@@ -147,7 +158,9 @@ table thead {
   width: 100%;
 }
 .banner form input, .banner form select, 
-.half form input, .half form select {
+.half form input, .half form select,
+.content-area form input, .content-area form select,
+#add-wallet form select {
   height: 2.5rem;
   font-size: .8rem;
   margin: .5rem 0;
@@ -156,15 +169,55 @@ table thead {
   border: 1px solid #ccc;
 }
 .half form input[type='submit'],
-.banner form input[type='submit'] {
+.banner form input[type='submit'],
+.content-area form input[type='submit'],
+#add-wallet form input[type='submit'],
+input[type='submit'] {
   background: #604684;
   color: #fff;
   font-size: 1rem;
   text-transform: uppercase;
   cursor: pointer;
 }
+#add-wallet form input[type='submit'] {
+  border: 1px solid #604684;
+  border-radius: 5px;
+  padding: .3rem;
+  text-transform: unset;
+  letter-spacing: .2rem;
+}
+.home-form form input[type='submit']{
+  padding: 0 1rem;
+  font-size: .8rem;
+}
+input[type='submit'] {
+  padding: .5rem 1rem;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+.home-form form select, .home-form form input {
+  margin: 0 .4rem;
+}
+.btn-danger {
+  background: transparent;
+  border: 1px solid red !important;
+  text-align: center;
+  color: red;
+  cursor: pointer;
+}
 span.small-p {
   font-size: 12px;
+}
+button#addWallet {
+  position: absolute;
+  bottom: 1rem;
+  right: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 5px;
+  padding: .4rem 1rem;
+  cursor: pointer;
 }
 /* Footer */
 footer {
@@ -234,6 +287,9 @@ p.social-menu a i {
 @media screen and (min-width: 480px) {
   .wrapper {
     flex-direction: row;
+    height: 90vh;
+  }
+  .dashboard .wrapper {
     height: 100vh;
   }
   header {
@@ -255,7 +311,7 @@ p.social-menu a i {
   }
   section .banner {
     background: url('../img/hero-banner.jpg') no-repeat;
-    padding: 4rem 7.5rem;
+    padding: 5rem 7.5rem;
     height: 90vh;
     align-items: center;
   }
@@ -265,6 +321,12 @@ p.social-menu a i {
   section .banner .hero-xchange, 
   section .reasons .reason-list {
     flex-direction: row;
+  }
+  section .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 5rem 8rem;
   }
   .half {
     width: 50%;
@@ -307,7 +369,7 @@ p.social-menu a i {
   .aside ul li {
     padding: 1.5rem;
   }
-  .aside ul li:hover {
+  .aside ul li:hover, .aside ul li.active {
     cursor: pointer; 
     background: #fff3;
   }
@@ -323,7 +385,6 @@ p.social-menu a i {
     width: 100%;
     background: #fff3;
   }
-
   .aside ul li a i {
     margin-right: 1rem;
   }
@@ -332,5 +393,80 @@ p.social-menu a i {
     position: relative;
     left: 20%;
     padding: 2.5rem 1rem;
+  }
+  .main-content.spa {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .main-content .content-area {
+    min-width: 450px;
+  }
+  .main-content .wallets {
+    margin-top: 2rem;
+  }
+  .content-area form {
+    width: 100%;
+  }
+  #wallet {
+    padding: 1rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 45%;
+  }
+  #wallet .card {
+    min-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1.5rem;
+  }
+  #wallet .card .card-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  #wallet .card .card-top .walletName {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  #wallet .card .card-top img {
+    width: 45px;
+    transform: rotate(15deg);
+  }
+  #wallet .card .card-content {
+    margin: 2rem auto;
+  }
+  #wallet .card .card-bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #wallet .card .card-bottom a {
+    margin: 0 .5rem;
+  }
+  #add-wallet, #depositNaira {
+    width: 100%;
+    height: 100vh;
+    background: #030303b3;
+    text-align: center;
+    padding: 10% 25%;
+    position: absolute;
+    top: 0;
+    display: none;
+    z-index: 999;
+  }
+  #add-wallet form {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5%;
+    position: relative;
+  }
+  #add-wallet form span.close {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
   }
 }
