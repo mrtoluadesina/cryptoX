@@ -99,7 +99,8 @@ section .reasons {
 }
 section .reasons h1 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 30px;
 }
 section .reasons .reason-list {
   display: flex;
@@ -112,6 +113,16 @@ section .reasons .reason-list .list-item {
 }
 section .reasons .reason-list .list-item img {
   margin-right: 1rem;
+}
+section .cta {
+  background: url('../img/cta-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 4rem 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 .half {
   width: 100%;
@@ -300,7 +311,7 @@ p.social-menu a i {
   }
   section .banner {
     background: url('../img/hero-banner.jpg') no-repeat;
-    padding: 4rem 7.5rem;
+    padding: 5rem 7.5rem;
     height: 90vh;
     align-items: center;
   }
@@ -310,6 +321,12 @@ p.social-menu a i {
   section .banner .hero-xchange, 
   section .reasons .reason-list {
     flex-direction: row;
+  }
+  section .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 5rem 8rem;
   }
   .half {
     width: 50%;
