@@ -16,7 +16,6 @@
   box-sizing: border-box;
 }
 body {
-  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
   font-family: "SpeakOT", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -149,6 +148,7 @@ table thead {
   padding: 1rem;
   width: 100%;
   display: flex;
+  flex-direction: column;
   margin-top: 1rem;
 }
 .transcard table {
@@ -166,6 +166,9 @@ table thead {
 }
 .transcard table tbody td i.st-danger {
   color: #f00
+}
+.receipt {
+  padding: 2.5rem;
 }
 .flex {
   display: flex;
@@ -472,6 +475,7 @@ p.social-menu a i {
   }
   #wallet .card .card-bottom a {
     margin: 0 .5rem;
+    font-weight: 800;
   }
   #add-wallet, #depositNaira {
     width: 100%;
@@ -551,5 +555,46 @@ p.social-menu a i {
     border-radius: 5px;
     padding: 1rem;
     margin: 1.5rem;
+  }
+  .data {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .data .deca-data, .data .deca-addy {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .data .deca-data img {
+    width: 150px;
+    margin-bottom: 1rem;
+  }
+  .data .deca-addy {
+    align-items: flex-end;
+  }
+  .data .deca-addy p {
+    text-align: right;
+  }
+  p.dec-address {
+    margin-bottom: 1.4rem;
+  }
+  span.contact-det {
+    display: block;
+    font-size: 14px;
+  }
+  .receiver, .invoice {
+    margin-top: 1.5rem;
+  }
+  .invoice {
+    text-align: right;
+  }
+  .invoice h1 {
+    margin-top: 1rem;
+    font-size: 40px;
+  }
+  .rec-footer {
+    text-align: right;
   }
 }
