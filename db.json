@@ -1,0 +1,274 @@
+{
+  "users": [
+    {
+      "firstname": "Tolulope",
+      "lastname": "Adesina",
+      "phonenumber": "+2348188193688",
+      "email": "tadesina90@gmail.com",
+      "username": "toluadesina",
+      "password": "qwerty",
+      "country": "Nigeria",
+      "status": 1,
+      "id": 1
+    },
+    {
+      "firstname": "Emmanuel",
+      "lastname": "Aboderin",
+      "phonenumber": "+2348156612100",
+      "email": "aboderinemanuel@gmail.com",
+      "username": "aboderinemma",
+      "password": "qwerty1",
+      "country": "Nigeria",
+      "status": 1,
+      "id": 2
+    },
+    {
+      "firstname": "Kingsley",
+      "lastname": "Okeke",
+      "phonenumber": "+2348102159211",
+      "email": "mr.kingsley.okeke@gmail.com",
+      "username": "mrkingsley",
+      "password": "qwerty2",
+      "status": 1,
+      "id": 3
+    }
+  ],
+  "wallets": [
+    {
+      "id": 1,
+      "currency": "Naira",
+      "symbol": "NGN",
+      "logo": "ngn.png"
+    },
+    {
+      "id": 2,
+      "currency": "Bitcoin",
+      "symbol": "BTC",
+      "logo": "btc.png"
+    },
+    {
+      "id": 3,
+      "currency": "Ethereum",
+      "symbol": "ETH",
+      "logo": "eth.png"
+    },
+    {
+      "id": 4,
+      "currency": "Ripple",
+      "symbol": "XRP",
+      "logo": "xrp.png"
+    },
+    {
+      "id": 5,
+      "currency": "Bitcoin-Cash",
+      "symbol": "BCH",
+      "logo": "bch.png"
+    },
+    {
+      "id": 6,
+      "currency": "Stellar-Lumens",
+      "symbol": "XLM",
+      "logo": "bch.png"
+    }
+  ],
+  "userWallets": [
+    {
+      "userId": "1",
+      "walletCurrency": "Naira",
+      "balance": "991630",
+      "symbol": "NGN",
+      "id": 1
+    },
+    {
+      "userId": "2",
+      "walletCurrency": "Naira",
+      "balance": "6000",
+      "symbol": "NGN",
+      "id": 2
+    },
+    {
+      "userId": "1",
+      "walletCurrency": "Bitcoin",
+      "balance": "0.49929943892260875",
+      "symbol": "BTC",
+      "id": 3
+    },
+    {
+      "userId": "3",
+      "walletCurrency": "Naira",
+      "balance": "0",
+      "symbol": "NGN",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "walletCurrency": "Bitcoin-Cash",
+      "balance": "100.0012",
+      "symbol": "BCH",
+      "id": 5
+    }
+  ],
+  "transactionType": [
+    {
+      "id": 1,
+      "type": "Deposit"
+    },
+    {
+      "id": 2,
+      "type": "Withdraw"
+    },
+    {
+      "id": 3,
+      "type": "Buy"
+    },
+    {
+      "id": 4,
+      "type": "Sell"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "userId": 1,
+      "userWalletId": 1,
+      "transactionType": "Deposit",
+      "amount": 10000,
+      "status": "success",
+      "transactionId": "bc8u09w3uq93c0",
+      "reference": "bc8u09w3uq93c0",
+      "timestamp": "2/25/2019, 6:41:49 AM"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "userWalletId": 1,
+      "transactionType": "Withdraw",
+      "amount": 5000,
+      "status": "success",
+      "transactionId": "bc8u09w3uq93c0",
+      "reference": "bc8u09w3uq93c0",
+      "timestamp": "2/28/2019, 6:09:49 PM"
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "30000",
+      "status": "success",
+      "transactionId": "T170575140353320",
+      "reference": "121424852",
+      "timestamp": "28/02/2019, 08:00:36",
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "5000",
+      "status": "success",
+      "transactionId": "T649258499284030",
+      "reference": "121426552",
+      "timestamp": "28/02/2019, 08:04:53",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Withdraw",
+      "amount": "4000",
+      "status": "success",
+      "transactionId": "T00000000000000",
+      "reference": "T00000000000000",
+      "timestamp": "28/02/2019, 08:33:25",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Withdraw",
+      "amount": "1000",
+      "status": "success",
+      "transactionId": "T75676267870089",
+      "reference": "T75676267870089",
+      "timestamp": "28/02/2019, 08:37:45",
+      "id": 6
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Withdraw",
+      "amount": "2000",
+      "status": "success",
+      "transactionId": "T714217248503827",
+      "reference": "594230396",
+      "timestamp": "28/02/2019, 08:51:28",
+      "id": 7
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "5",
+      "status": "success",
+      "transactionId": "T975893087125775",
+      "reference": "121465385",
+      "timestamp": "28/02/2019, 09:19:42",
+      "id": 8
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "500",
+      "status": "success",
+      "transactionId": "T541422607565967",
+      "reference": "121565801",
+      "timestamp": "28/02/2019, 11:10:12",
+      "id": 9
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "4500",
+      "status": "success",
+      "transactionId": "T434655744973458",
+      "reference": "121573141",
+      "timestamp": "28/02/2019, 11:14:09",
+      "id": 10
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "995",
+      "status": "success",
+      "transactionId": "T259724091421313",
+      "reference": "121575197",
+      "timestamp": "28/02/2019, 11:15:09",
+      "id": 11
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "2000",
+      "status": "success",
+      "transactionId": "T347207223456037",
+      "reference": "121802285",
+      "timestamp": "28/02/2019, 21:45:29",
+      "id": 12
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "5000",
+      "status": "success",
+      "transactionId": "T573084231654003",
+      "reference": "121876296",
+      "timestamp": "01/03/2019, 01:04:02",
+      "id": 13
+    }
+  ]
+}
