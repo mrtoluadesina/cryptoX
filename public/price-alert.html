@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simplest way to exchange cryptocurrecy - Decachain</title>
+  <link rel="shortcut icon" href="./img/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript"  src="./js/access.js"></script>
+</head>
+<body class="dashboard">
+  <header class="header">
+    <a href="javascript:void()">
+      <span class="logo">d</span> <span class="logo-text">decachain</span>
+    </a>
+    <ul class="nav">
+      <li class="hideDesktop"><a href="/">Menu</a></li>
+      <li><a id="btcNgn" href="/">BTC/NGN 1,351,838</a></li>
+      <li><a id="user-info" href="./settings.html">Hi, User!</a></li>
+    </ul>
+  </header>
+  <section class="wrapper">
+    <div id="sidebar" class="aside">
+      <ul>
+        <li><a href="./dashboard.html"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li><a href="./wallets.html"><i class="fa fa-briefcase"></i>Wallets</a></li>
+        <li><a href="./transactions.html"><i class="fa fa-list"></i>Transactions</a></li>
+        <li class="active"><a href="./price-alert.html"><i class="fa fa-bell"></i>Price Alert <sup>beta</sup></a></li>
+        <li><a href="./settings.html"><i class="fa fa-gear"></i>Settings</a></li>
+        <li><a id="logout" href="./login.html"><i class="fa fa-sign-out"></i>Logout</a></li>
+      </ul>
+    </div>
+    <div class="main-content spa">
+      <div class="content-area flex">
+        <form id="profile" class="flex flex-col" method="">
+          <h2>Choose Currency to get Price Alert</h2>
+          <span id="notification"></span>
+          <select name="currency" id="selectCurrency">
+            <option value="" disabled>Select Currency</option>
+            <option value='Naira'>Naira</option>
+            <option value='Bitcoin'>Bitcoin</option>
+            <option value='Etherium'>Etherium</option>
+          </select>
+          <input type="submit" id="submit" value="Get Price Alert">
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script type="text/javascript"  src="./js/jquery.js"></script>
+  <script type="text/javascript"  src="./js/custom.js"></script>
+  <script type="text/javascript"  src="./js/access.js"></script>
+  <script type="text/javascript"  src="./js/dashboard.js"></script>
+  <script type="text/javascript"  src="./js/settings.js"></script>
+</body>
+</html>
