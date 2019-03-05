@@ -1,0 +1,214 @@
+[33mcommit 8de3ee8b2e0f126493ad4f12d6a77f8e94d077bb[m[33m ([m[1;36mHEAD -> [m[1;32mpayments[m[33m, [m[1;31morigin/payments[m[33m)[m
+Author: eofafrica4lyf <aboderinemmanuel@gmail.com>
+Date:   Fri Mar 1 01:27:46 2019 -0800
+
+    dashboard page
+
+[33mcommit 3a07c5cc83a773d478e7b11f424942c83518eda6[m
+Author: eofafrica4lyf <aboderinemmanuel@gmail.com>
+Date:   Fri Mar 1 01:24:31 2019 -0800
+
+    buy naira into the naira wallet
+
+[33mcommit 215ef4bcf388a2fbbb583a52babb2bbd24769ae5[m
+Author: eofafrica4lyf <aboderinemmanuel@gmail.com>
+Date:   Fri Mar 1 01:22:03 2019 -0800
+
+    feature to buy other cryptocurrencies
+
+[33mcommit c972ae2dbf9449527081a38126e0d7378d279a15[m
+Author: eofafrica4lyf <aboderinemmanuel@gmail.com>
+Date:   Fri Mar 1 01:21:16 2019 -0800
+
+    wallet management page
+
+[33mcommit 1741affbbe97b53b0b399667f048b441a95f4fa7[m
+Author: eofafrica4lyf <aboderinemmanuel@gmail.com>
+Date:   Fri Mar 1 01:19:09 2019 -0800
+
+    payments integration using paystack
+
+[33mcommit 3c13d39d9c5c780e2f996e289ab6c1a5e03dbc22[m[33m ([m[1;32mtransactions[m[33m)[m
+Merge: 5e56b19 113bdf9
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 15:32:25 2019 +0100
+
+    Merge pull request #10 from mrtoluadesina/dashboard
+    
+    Dashboard created and merge conflict resolved
+
+[33mcommit 113bdf934d0944c3e75bb493e1bcaaf605513e73[m
+Merge: 7ece427 5e56b19
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 15:31:02 2019 +0100
+
+    resolved merge conflict and removed .ds file
+
+[33mcommit 7ece427e048d27114ced6ae8d12843803fec41e4[m
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 15:20:13 2019 +0100
+
+    transactions page created
+
+[33mcommit 9274b17dd3f55e38d0c57a631aa080bab38dd2bd[m
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 15:19:47 2019 +0100
+
+    Dashboard created
+
+[33mcommit 5e56b19f4ed95f64127418b0c3da3ae702ecbd85[m
+Merge: 31e8fa5 30c3124
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 12:12:58 2019 +0100
+
+    Merge pull request #9 from mrtoluadesina/index
+    
+    added cta to index page
+
+[33mcommit 30c3124767afc640a8badead094f28af8854e2bc[m
+Merge: c96bb07 31e8fa5
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 12:12:49 2019 +0100
+
+    Merge branch 'staging' into index
+
+[33mcommit c96bb079883d514b226cfd41676c20b0ad7d1675[m
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 12:10:02 2019 +0100
+
+    added cta to index page
+
+[33mcommit 31e8fa51d99597d3fd8513e0c148ba9a1fb3c4ce[m
+Merge: ad3dea7 e5d5e74
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 12:08:05 2019 +0100
+
+    Merge pull request #8 from mrtoluadesina/exchange
+    
+    added fonts
+
+[33mcommit e5d5e744dbc576e619b541cf3771e4ac84e9c9a8[m
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 11:47:07 2019 +0100
+
+    added fonts
+
+[33mcommit ad3dea737b4557143e8c3cf374066693d61b491d[m
+Merge: 75bbf82 4cee9e9
+Author: Emmanuel <aboderinemmanuel@gmail.com>
+Date:   Thu Feb 28 02:13:43 2019 -0800
+
+    Merge pull request #7 from mrtoluadesina/authentication
+    
+    Authentication
+
+[33mcommit 4cee9e9cc4ee32571738241e6e641653688734b8[m[33m ([m[1;31morigin/authentication[m[33m, [m[1;32mauthentication[m[33m)[m
+Author: eofafrica4lyf <aboderinemmanuel@gmail.com>
+Date:   Thu Feb 28 02:12:31 2019 -0800
+
+    Restricting access to users
+
+[33mcommit 75bbf826dec06c5c13fd816972d5c5985c71cb71[m
+Merge: 60a1e55 4d432db
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 11:08:47 2019 +0100
+
+    Merge pull request #6 from mrtoluadesina/exchange
+    
+    validating user upon exchange on index page
+
+[33mcommit 4d432dbac5ef5e2251f891d803584f2035bede93[m
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 11:07:42 2019 +0100
+
+    validating user upon exchange on index page
+
+[33mcommit 3a4e43b8e2e157af22b6409f02bd64cb69ed682d[m
+Author: eofafrica4lyf <aboderinemmanuel@gmail.com>
+Date:   Thu Feb 28 02:02:52 2019 -0800
+
+    authentication added
+
+[33mcommit 60a1e55a6d38202e801cfb004da5ecc75e706396[m
+Merge: 76e635d 4ccdb24
+Author: Emmanuel <aboderinemmanuel@gmail.com>
+Date:   Wed Feb 27 23:41:44 2019 -0800
+
+    Merge pull request #5 from mrtoluadesina/register
+    
+    register page created
+
+[33mcommit 4ccdb24b43d36975bccfbff514ccd81445975733[m[33m ([m[1;31morigin/register[m[33m, [m[1;32mregister[m[33m)[m
+Author: eofafrica4lyf <aboderinemmanuel@gmail.com>
+Date:   Wed Feb 27 23:40:48 2019 -0800
+
+    register page created
+
+[33mcommit 76e635dfd3fa6e90dea57e37dc42ae1be9e2a682[m
+Merge: 156916f 119e5b9
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 08:36:19 2019 +0100
+
+    Merge pull request #4 from mrtoluadesina/exchange
+    
+    exchange page created
+
+[33mcommit 119e5b99001e304b1d96ee1341efffe1d3530ae5[m
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Thu Feb 28 08:33:28 2019 +0100
+
+    exchange page created
+
+[33mcommit 156916f5997ca4c2c57d7395bad67e5ef136e737[m
+Merge: 2a4bd44 147b431
+Author: Emmanuel <aboderinemmanuel@gmail.com>
+Date:   Wed Feb 27 00:40:34 2019 -0800
+
+    Merge pull request #3 from mrtoluadesina/Login
+    
+    Login page created.
+
+[33mcommit 2a4bd444277b5a8e188df2ffc0cf70f12e350efd[m
+Merge: d5db75f 674a1ef
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Wed Feb 27 09:39:41 2019 +0100
+
+    Merge pull request #2 from mrtoluadesina/index
+    
+    Index page created
+
+[33mcommit 147b431633e91a471a23938355f502de0b839eec[m[33m ([m[1;31morigin/Login[m[33m, [m[1;32mLogin[m[33m)[m
+Author: eofafrica4lyf <aboderinemmanuel@gmail.com>
+Date:   Wed Feb 27 00:36:29 2019 -0800
+
+    Login page created
+
+[33mcommit 674a1ef6b6efd43983891795a41559a9a7c03ffd[m
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Wed Feb 27 09:29:15 2019 +0100
+
+    index page created
+
+[33mcommit b77590a1eb24cba40cfc48f6d88a1c6503369a28[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Tue Feb 26 15:06:00 2019 +0100
+
+    Delete tolu.txt
+
+[33mcommit edd75b0824519a71c3cd33700455721724dec267[m
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Tue Feb 26 15:05:27 2019 +0100
+
+    emmanuel created
+
+[33mcommit 27283705a801b6960a1c2a4224baf926b829e44e[m
+Author: user <user@users-MacBook-Pro.local>
+Date:   Tue Feb 26 14:59:09 2019 +0100
+
+    Tolu.txt created
+
+[33mcommit d5db75f3a38f2ef5baeb171b265623e892e86a1b[m
+Author: Tolu Adesina <tadesina90@gmail.com>
+Date:   Tue Feb 26 14:31:20 2019 +0100
+
+    Initial commit
