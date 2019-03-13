@@ -1,3 +1,3 @@
-if (localStorage.length === 0) {
+if (localStorage.userId === undefined || localStorage.length === 0) {
   window.location.replace('./login.html');
 }
