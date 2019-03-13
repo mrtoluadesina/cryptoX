@@ -15,7 +15,7 @@ $(document).ready(() => {
           <div class="card">
             <div class="card-top">
               <span class="walletName">${el.walletCurrency} Wallet</span>
-              <img class="walletLogo" src="./img/${el.symbol}.png" alt="naira">
+              <img class="walletLogo" src="./img/${el.symbol}.png" alt="${el.walletCurrency}">
             </div>
             <div class="card-content">
               <p>Balance: ${el.symbol} ${el.balance}</p>
