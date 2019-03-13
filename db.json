@@ -97,7 +97,7 @@
     {
       "userId": "1",
       "walletCurrency": "Naira",
-      "balance": "275500",
+      "balance": "254500",
       "symbol": "NGN",
       "id": 1
     },
@@ -111,7 +111,7 @@
     {
       "userId": "1",
       "walletCurrency": "Bitcoin",
-      "balance": "0.5102010142267339",
+      "balance": "0.524364014226734",
       "symbol": "BTC",
       "id": 3
     },
