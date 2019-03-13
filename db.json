@@ -97,7 +97,7 @@
     {
       "userId": "1",
       "walletCurrency": "Naira",
-      "balance": "254500",
+      "balance": "250500",
       "symbol": "NGN",
       "id": 1
     },
@@ -914,6 +914,42 @@
       "timestamp": "13/03/2019, 01:27:01",
       "currencyWallet": "Naira",
       "id": 69
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Withdraw",
+      "amount": "1000",
+      "status": "success",
+      "transactionId": "T177546494074200",
+      "reference": "373395017",
+      "timestamp": "3/13/2019, 3:54:09 PM",
+      "currencyWallet": "Naira",
+      "id": 70
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Withdraw",
+      "amount": "1000",
+      "status": "success",
+      "transactionId": "T966409597860694",
+      "reference": "024079887",
+      "timestamp": "3/13/2019, 3:54:11 PM",
+      "currencyWallet": "Naira",
+      "id": 71
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Withdraw",
+      "amount": "2000",
+      "status": "success",
+      "transactionId": "T572897582269969",
+      "reference": "968788688",
+      "timestamp": "3/13/2019, 3:55:03 PM",
+      "currencyWallet": "Naira",
+      "id": 72
     }
   ]
 }
