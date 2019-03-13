@@ -312,7 +312,12 @@ function transactSell(selector,selector1){
                 alert('Network Error! Please try again later!');
             });
         } else {
-            alert('Your money no reach')
+          swal({
+            text: 'Your money no reach',
+            icon: "warning"
+          }).then(()=> {
+            location.reload(true);
+          });
         }
     })
 }
