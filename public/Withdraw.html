@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simplest way to exchange cryptocurrecy - Decachain</title>
+  <link rel="shortcut icon" href="./img/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript"  src="./js/access.js"></script>
+</head>
+<body class="dashboard">
+  <header class="header">
+    <a href="javascript:void()">
+      <span class="logo">d</span> <span class="logo-text">decachain</span>
+    </a>
+    <ul class="nav">
+      <li class="hideDesktop"><a href="/">Menu</a></li>
+      <li><a href="/">BTC/NGN 1,351,838</a></li>
+      <li><a id="user-info" href="./settings.html">Hi, User!</a></li>
+    </ul>
+  </header>
+  <section class="wrapper">
+    <div id="sidebar" class="aside">
+      <ul>
+        <li><a href="./dashboard.html"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active"><a href="./wallets.html"><i class="fa fa-briefcase"></i>Wallets</a></li>
+        <li><a href="./transactions.html"><i class="fa fa-list"></i>Transactions</a></li>
+        <li><a href="./price-alert.html"><i class="fa fa-bell"></i>Price Alert</a></li>
+        <li><a href="./settings.html"><i class="fa fa-gear"></i>Settings</a></li>
+        <li><a id="logout" href="./login.html"><i class="fa fa-sign-out"></i>Logout</a></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="content-area wallets flex">
+        <div id="moneywithdraw">
+                    
+            <form id="newWithdraw" class="flex flex-col" method="">
+               
+                <h2>How much Naira are you buying?</h2>
+                
+                        <label for="bank">Account type</i></label><br>
+                        <select type="text" class="form-control " id="currency-type">
+                            <option selected>Choose</option>
+                            <option value="naira">Naira Account</option>
+                            <option value="dollar">Dollar Account</option>
+                        </select>
+
+                        <div style="display: none;" id="naira">
+                            <label for="bank">Bank name</i></label><br>
+                            <select type="text" class="form-control " id="bank">
+                                <option selected>Choose</option>
+                                <option value="access">Access Bank</option>
+                                <option value="citibank">Citibank</option>
+                                <option value="diamond">Diamond Bank</option>
+                                <option value="ecobank">Ecobank</option>
+                                <option value="fidelity">Fidelity Bank</option>
+                                <option value="fcmb">First City Monument Bank (FCMB)</option>
+                                <option value="fsdh">FSDH Merchant Bank</option>
+                                <option value="gtb">Guarantee Trust Bank (GTB)</option>
+                                <option value="heritage">Heritage Bank</option>
+                                <option value="Keystone">Keystone Bank</option>
+                                <option value="rand">Rand Merchant Bank</option>
+                                <option value="skye">Skye Bank</option>
+                                <option value="stanbic">Stanbic IBTC Bank</option>
+                                <option value="standard">Standard Chartered Bank</option>
+                                <option value="sterling">Sterling Bank</option>
+                                <option value="suntrust">Suntrust Bank</option>
+                                <option value="union">Union Bank</option>
+                                <option value="uba">United Bank for Africa (UBA)</option>
+                                <option value="unity">Unity Bank</option>
+                                <option value="wema">Wema Bank</option>
+                                <option value="zenith">Zenith Bank</option>
+                            </select><br>
+                            <input id="naira-account" name="naira-account" placeholder="Your Bank Account?" /><br>
+                            <input id="naira-amount" name="naira-amount" placeholder="How much Naira are you withdrawing?" />
+                        </div>
+
+                        <div style="display: none;" id="dollar">
+                            <input id="dollar-amount" name="dollar-deposit" placeholder="How much Dollar are you withdrawing?" /><br>
+                            <input id="dollar-email" name="dollar-email" placeholder="Your Email Address" /><br>
+                        </div>
+                        
+                        
+
+                        <!-- <label for="bank">Bank name</i></label><br>
+                        <select type="text" class="form-control " id="bank">
+                            <option selected>Choose</option>
+                            <option value="access">Access Bank</option>
+                        </select> -->
+                
+                <span id="error" style="color: red"></span>
+                
+                <button type="submit" id="withdraw" disabled> Withdraw</button>
+              </form>
+            <!-- <button id="addWallet"> + Add Wallet</button> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <div id="add-payment">
+    <form id="newWallet" class="flex flex-col" method="">
+      <span id="close">Close</span>
+      <h2>Add Wallet</h2>
+      <select name="currency" id="selectCurrency">
+          <option value="" disabled>Select Currency</option>
+          <option value='Naira'>Naira</option>
+          <option value='Bitcoin'>Bitcoin</option>
+          <option value='Etherium'>Etherium</option>
+        </select>
+      <span id="error" style="color: red"></span>
+      <input type="submit" value="Create Wallet">
+    </form>
+  </div> -->
+  <!-- <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="https://js.paystack.co/v1/inline.js"></script>  
+  <script type="text/javascript" src="./js/paystack.js"></script>
+
+  <script type="text/javascript"  src="./js/dashboard.js"></script>
+  <script type="text/javascript"  src="./js/wallet.js"></script>
+  <script type="text/javascript"  src="./js/withdraw.js"></script>
+  
+  
+</body>
+</html>
