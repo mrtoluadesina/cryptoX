@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "firstname": "Tolulope",
+      "lastname": "Adesina",
+      "phonenumber": "+2348188193688",
+      "email": "tadesina90@gmail.com",
+      "username": "toluadesina",
+      "password": "qwerty",
+      "country": "Nigeria",
+      "status": 1,
+      "id": 1
+    },
+    {
+      "firstname": "Emmanuel",
+      "lastname": "Aboderin",
+      "phonenumber": "+2348156612100",
+      "email": "aboderinemanuel@gmail.com",
+      "username": "aboderinemma",
+      "password": "qwerty1",
+      "country": "Nigeria",
+      "status": 1,
+      "id": 2
+    },
+    {
+      "firstname": "Kingsley",
+      "lastname": "Okeke",
+      "phonenumber": "+2348102159211",
+      "email": "mr.kingsley.okeke@gmail.com",
+      "username": "mrkingsley",
+      "password": "qwerty2",
+      "status": 1,
+      "id": 3
+    }
+  ],
+  "wallets": [
+    {
+      "id": 1,
+      "currency": "Naira",
+      "symbol": "NGN",
+      "logo": "ngn.png"
+    },
+    {
+      "id": 2,
+      "currency": "Bitcoin",
+      "symbol": "BTC",
+      "logo": "btc.png"
+    },
+    {
+      "id": 3,
+      "currency": "Etherium",
+      "symbol": "ETH",
+      "logo": "eth.png"
+    }
+  ],
+  "userWallets": [
+    {
+      "id": 1,
+      "userId": 1,
+      "walletCurrency": "Naira",
+      "balance": 245000,
+      "symbol": "NGN"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "walletCurrency": "Naira",
+      "balance": 0,
+      "symbol": "NGN"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "walletCurrency": "Bitcoin",
+      "balance": 0.12,
+      "symbol": "BTC"
+    },
+    {
+      "userId": "3",
+      "walletCurrency": "Naira",
+      "balance": "0",
+      "symbol": "NGN",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "walletCurrency": "Etherium",
+      "balance": "0",
+      "symbol": "ETH",
+      "id": 5
+    }
+  ]
+}
