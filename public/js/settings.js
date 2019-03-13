@@ -11,6 +11,7 @@ $(document).ready(() => {
     $('#firstname').val(`${data[0].firstname === undefined ? '' : data[0].firstname}`);
     $('#lastname').val(`${data[0].lastname === undefined ? '' : data[0].lastname}`);
     $('#phonenumber').val(`${data[0].phonenumber}`);
+    $('#accountNumber').val(`${data[0].accountNumber}`);
     $('#country').val(`${data[0].country === undefined ? '' : data[0].country}`);
     $('form#profile').submit(e => {
       e.preventDefault();
@@ -30,6 +31,7 @@ $(document).ready(() => {
             "status": `${data[0].status}`,
             "password": `${data[0].password}`,
             "phonenumber": `${phonenumber}`,
+            "accountNumber": `${accountNumber}`,
             "country": `${country}`
           }
         }).done(() => {

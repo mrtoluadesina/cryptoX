@@ -49,7 +49,12 @@ function payWithPaystack() {
                 onClose: function () {
                     //when the user close the payment modal
                     console.log('Transaction cancelled');
-                    alert('Transaction cancelled');
+                    swal({
+                      text: 'Transaction cancelled',
+                      icon: 'warning'
+                    }).then(() => {
+                      location.reload(true);
+                    });
                 }
             });
             handler.openIframe(); //open the paystack's payment modal
