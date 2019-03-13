@@ -17,7 +17,7 @@
     </a>
     <ul class="nav">
       <li class="hideDesktop"><a href="/">Menu</a></li>
-      <li><a href="/">BTC/NGN 1,351,838</a></li>
+      <li><a id="btcNgn" href="/"></a></li>
       <li><a id="user-info" href="./settings.html">Hi, User!</a></li>
     </ul>
   </header>
@@ -38,11 +38,11 @@
           <div class="summary">
             <div class="summary-item">
               <h1><i class="fa fa-briefcase"></i>Wallets</h1>
-              <span class="numberOf">3</span>
+              <a href="./wallets.html"><span id="walletNo" class="numberOf">0</span></a>
             </div>
             <div class="summary-item">
               <h1><i class="fa fa-list"></i>Transactions</h1>
-              <span class="numberOf">12</span>
+              <a href="./transactions.html"><span id="transNo" class="numberOf">0</span></a>
             </div>
             <div class="summary-item">
               <h1><i class="fa fa-bell"></i>Alerts <sup>coming soon</sup></h1>
@@ -51,12 +51,42 @@
           </div>
           <div class="short-links">
             <div class="card">
-
+              <a class="fx-widget" data-widget="crypto-market-overview" data-lang="en" data-crypto-type="coins" data-coins="bch-usd,btc-usd,eth-usd,xlm-usd,xrp-usd" data-pairs="btc-usd,eth-usd,bch-usd,iot-usd,ltc-usd,xrp-usd,dash-usd" data-primary-text-color="#333333" data-secondary-text-color="#999999" data-border-color="#d8d8d8" data-background-color="#ffffff" data-header-background-color="#eeeeee" data-header-text-color="#333333" data-width="340" data-height="570" data-url="//www.fxempire.com" href="https://www.fxempire.com" rel="nofollow" style="font-family:Helvetica;font-size:16px;line-height:1.5;text-decoration:none;float: right;"> 
+                <span style="color:#999999;display:inline-block;margin-top:10px;font-size:12px;">Powered By </span> <img style="width:87px; height:14px;" src="https://www.fxempire.com/logo-full.svg" alt="FX Empire logo" /> </a> <script async charset="utf-8" src="https://widgets.fxempire.com/widget.js" ></script> 
+            </div> 
+            <div class="card no-border">
+              <!-- TradingView Widget BEGIN -->
+              <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BITFINEX-BTCUSD/" rel="noopener" target="_blank">
+                </div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+                  {
+                  "symbol": "BITFINEX:BTCUSD",
+                  "width": 350,
+                  "height": 220,
+                  "locale": "en",
+                  "dateRange": "1y",
+                  "colorTheme": "light",
+                  "trendLineColor": "rgba(112, 0, 105, 1)",
+                  "underLineColor": "rgba(112, 0, 105, 1)",
+                  "isTransparent": false,
+                  "autosize": false,
+                  "largeChartUrl": ""
+                }
+                </script>
+              </div>
+              <!-- TradingView Widget END -->
+            </div>
+          </div>
+          <!-- <div class="short-links">
+            <div class="card no-border">
+              
             </div>
             <div class="card">
               
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -69,3 +99,4 @@
   <script type="text/javascript"  src="./js/settings.js"></script>
 </body>
 </html>
+
