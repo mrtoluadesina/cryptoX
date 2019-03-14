@@ -16,12 +16,10 @@ $('form#register').submit(e => {
   if( email && phonenumber && username && password ) {
     $.ajax({
       method: "GET",
-      url: `http://localhost:3000/users?username=${username}`,
+      url: `${baseUrl}users?username=${username}`,
       data: {get_param: 'value'}
     }).done(data => {
       var accountNumber = Math.floor(1000000000 + Math.random() * 9000000000);
-      console.log(accountNumber)
-      console.log(data);
       if (data.length !== 0 && data[0].phonenumber === phonenumber) {
         swal({
           title: "User already exists on Decachain",
@@ -37,7 +35,7 @@ $('form#register').submit(e => {
       } else {
         $.ajax({
           method: "POST",
-          url: "http://localhost:3000/users",
+          url: `${baseUrl}users`,
           data: {
             "email": `${email}`,
             "phonenumber": `${phonenumber}`,
@@ -50,7 +48,7 @@ $('form#register').submit(e => {
           localStorage.userId = data.id;
           $.ajax({
             method: "POST",
-            url: "http://localhost:3000/userWallets",
+            url: `${baseUrl}userWallets`,
             data: {
               "userId": localStorage.userId,
               "walletCurrency": "Naira",
@@ -58,13 +56,24 @@ $('form#register').submit(e => {
               "symbol": "NGN"
             }
           }).done(() => {
+              Email.send({
+                Host : "smtp.gmail.com",
+                Username : "DecaChain",
+                Password : "Ai.,!54&dope",
+                To : localStorage.receiverEmail,
+                From : "decachain@gmail.com",
+                Subject : `Welcome to DecaChain, ${username}`,
+                Body : `You are now on the simplest cryptocurrency exchange platform ever. <br> 
+                You should update your profile first, <a href="https://decachain.herokuapp.com/settings.html" target="_blank">click here</a> to do so`
+            }).then( message => {
               swal({
-              text: "Successfully created your account",
-              icon: "success",
-              button: "Now Login"
-            }).then(() => {
-              window.location.href = "./login.html";
-            });
+                text: "Successfully created your account",
+                icon: "success",
+                button: "Login"
+              }).then(() => {
+                window.location.href = "./login.html";
+              });
+            }); 
           });
           
 
@@ -77,36 +86,6 @@ $('form#register').submit(e => {
     })
   }
 })
-// $('form#register').submit(e => {
-//   e.preventDefault();
-//   var email = $('#email').val(),
-//       phonenumber = $('#phonenumber').val(),
-//       username = $('#username').val(),
-//       password = $('#password').val();
-//   if( email && phonenumber && username && password ) {
-//     $.ajax({
-//       method: "POST",
-//       url: "http://localhost:3000/users",
-//       data: {
-//         "email": `${email}`,
-//         "phonenumber": `${phonenumber}`,
-//         "username": `${username}`,
-//         "password": `${password}`,
-//         "status": 1
-//       }
-//     }).done(() => {
-//       swal({
-//         text: "Successfully created your account",
-//         icon: "success",
-//         button: "Now Login"
-//       }).then(() => {
-//         window.location.href = "./login.html";
-//       });
-//     }).fail(() => {
-//       console.log('Network error - it is not our fault!!!')
-//     })
-//   }
-// })
 $('form#login').submit(e => {
   e.preventDefault();
   var username = $('#username').val(),
@@ -114,7 +93,7 @@ $('form#login').submit(e => {
   if( username && password ) {
     $.ajax({
       method: 'GET',
-      url: `http://localhost:3000/users?username=${username}`,
+      url: `${baseUrl}users?username=${username}`,
       data: { get_param: 'value' }
     }).done(data => {
       if (data.length === 0) {

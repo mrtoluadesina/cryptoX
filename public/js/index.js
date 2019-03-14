@@ -6,7 +6,7 @@ $('form#homeForm').submit(e => {
     localStorage.amountToExchange = amount;
     $.ajax({
       method: "GET",
-      url: `http://localhost:3000/wallets?currency=${currency}`,
+      url: `${baseUrl}wallets?currency=${currency}`,
       data: {get_param: 'value'}
     }).done(()=> {
       localStorage.currencyToExchangeSymbol = data.symbol;
@@ -47,7 +47,7 @@ $('#xAddFunds').click(e => {
     // var userId = localStorage.userId
     // $.ajax({
     //   method: "GET",
-    //   url: `http://localhost:3000/users/${userId}`,
+    //   url: `${baseUrl}users/${userId}`,
     //   data: { get_param: 'value' }
     // }).done(data => {
     //   window.location.href = './wallets.html'

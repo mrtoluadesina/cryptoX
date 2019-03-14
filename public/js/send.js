@@ -19,7 +19,7 @@ function transactionDetails(){
 
   $.ajax({
     method: 'GET',
-    url: `http://localhost:3000/userWallets?userId=${userId}`,
+    url: `${baseUrl}userWallets?userId=${userId}`,
     data: {get_param: 'value'}
   }).done(data => {
     $.each(data, (index, el) => {
@@ -37,14 +37,14 @@ function transactionDetails(){
       currencyType && accountNumber && amountToSend ? console.log("all filled") : console.log("all not filled")
       $.ajax({
         method: 'GET',
-        url: `http://localhost:3000/users?accountNumber=${accountNumber}`,
+        url: `${baseUrl}users?accountNumber=${accountNumber}`,
         data: {get_param: 'value'}
       }).done(data => {
         localStorage.receiverId = data[0].id;
         localStorage.receiverEmail = data[0].email;
         $.ajax({
           method: "GET",
-          url: `http://localhost:3000/userWallets?userId=${localStorage.receiverId}&&walletCurrency=${currencyType}`,
+          url: `${baseUrl}userWallets?userId=${localStorage.receiverId}&&walletCurrency=${currencyType}`,
           data: { get_param: 'value' }
         }).done(data => {
           localStorage.receiverWallet = data[0].id;
@@ -59,7 +59,7 @@ function transactionDetails(){
               localStorage[currencyType] = Number(localStorage[currencyType]) - Number(amountToSend);
               $.ajax({
                 method: 'PUT',
-                url: `http://localhost:3000/userWallets/${localStorage[currencyType + '-walletId']}`,
+                url: `${baseUrl}userWallets/${localStorage[currencyType + '-walletId']}`,
                 data: {
                   "userId": `${userId}`,
                   "walletCurrency": `${currencyType}`,
@@ -72,7 +72,7 @@ function transactionDetails(){
                 var ref = trans.ref;
                 $.ajax({
                   method: "POST",
-                  url: "http://localhost:3000/transactions",
+                  url: `${baseUrl}transactions`,
                   data: {
                     "userId": `${userId}`,
                     "userWalletId": localStorage[currencyType + '-walletId'],
@@ -90,7 +90,7 @@ function transactionDetails(){
                 localStorage.receiverBalance = Number(localStorage.receiverBalance) + Number(amountToSend);
                 $.ajax({
                   method: 'PUT',
-                  url: `http://localhost:3000/userWallets/${localStorage.receiverWallet}`,
+                  url: `${baseUrl}userWallets/${localStorage.receiverWallet}`,
                   data: {
                     "userId": `${localStorage.receiverId}`,
                     "walletCurrency": `${currencyType}`,
@@ -103,7 +103,7 @@ function transactionDetails(){
                   var ref = trans.ref;
                   $.ajax({
                     method: "POST",
-                    url: "http://localhost:3000/transactions",
+                    url: `${baseUrl}transactions`,
                     data: {
                       "userId": `${localStorage.receiverId}`,
                       "userWalletId": localStorage.receiverWallet,
