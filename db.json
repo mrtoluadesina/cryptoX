@@ -1,12 +1,15 @@
 {
   "users": [
     {
-      "email": "tadesina90@gmail.com",
-      "phonenumber": "08188193688",
+      "firstname": "Tolulope",
+      "lastname": "Adesina",
       "username": "toluadesina",
-      "password": "U2FsdGVkX19stSifm8nSc4hPd5w5Sc+gyazlEHvOCOg=",
+      "email": "tadesina90@gmail.com",
       "status": "1",
-      "accountNumber": "8829789188",
+      "password": "U2FsdGVkX19YUvUUXhLvMphFitCXROQFq5CqunoUQIA=",
+      "phonenumber": "+2348188193688",
+      "accountNumber": "5217506247",
+      "country": "Nigeria",
       "id": 1
     }
   ],
@@ -52,9 +55,16 @@
     {
       "userId": "1",
       "walletCurrency": "Naira",
-      "balance": "0",
+      "balance": "650",
       "symbol": "NGN",
       "id": 1
+    },
+    {
+      "userId": "1",
+      "walletCurrency": "Bitcoin",
+      "balance": "0.00025",
+      "symbol": "BTC",
+      "id": 2
     }
   ],
   "transactionType": [
@@ -75,5 +85,28 @@
       "type": "Sell"
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "1000",
+      "status": "success",
+      "transactionId": "T750641472453014",
+      "reference": "130280610",
+      "timestamp": "14/03/2019, 23:35:30",
+      "id": 1
+    },
+    {
+      "userId": "1",
+      "transactionType": "Buy",
+      "amount": "350",
+      "status": "success",
+      "transactionId": "T508331487664313",
+      "reference": "758462167",
+      "timestamp": "14/03/2019, 23:36:11",
+      "currencyWallet": "Bitcoin",
+      "id": 2
+    }
+  ]
 }

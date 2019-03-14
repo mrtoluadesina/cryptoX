@@ -8,7 +8,6 @@ $(document).ready(function(e){
         data1 = data;
             data1 = data1.reverse();
         $.each(data, (index,el) => {
-            // console.log(el); 
             $('#transactions').append(`
             <tr>
             <td><i class="fa fa-circle st-${el.status}"></i></td>
