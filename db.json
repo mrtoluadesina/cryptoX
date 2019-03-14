@@ -1,15 +1,12 @@
 {
   "users": [
     {
-      "firstname": "Tolulope",
-      "lastname": "Adesina",
-      "username": "toluadesina",
       "email": "tadesina90@gmail.com",
-      "status": "1",
-      "password": "qwerty",
       "phonenumber": "08188193688",
-      "accountNumber": "4578814443",
-      "country": "Nigeria",
+      "username": "toluadesina",
+      "password": "U2FsdGVkX19stSifm8nSc4hPd5w5Sc+gyazlEHvOCOg=",
+      "status": "1",
+      "accountNumber": "8829789188",
       "id": 1
     }
   ],
@@ -55,16 +52,9 @@
     {
       "userId": "1",
       "walletCurrency": "Naira",
-      "balance": "1500",
+      "balance": "0",
       "symbol": "NGN",
       "id": 1
-    },
-    {
-      "userId": "1",
-      "walletCurrency": "Bitcoin",
-      "balance": "0",
-      "symbol": "BTC",
-      "id": 2
     }
   ],
   "transactionType": [
@@ -85,40 +75,5 @@
       "type": "Sell"
     }
   ],
-  "transactions": [
-    {
-      "userId": "1",
-      "userWalletId": "1",
-      "transactionType": "Deposit",
-      "amount": "1000",
-      "status": "success",
-      "transactionId": "T211445846971472",
-      "reference": "130036929",
-      "timestamp": "14/03/2019, 18:16:43",
-      "id": 1
-    },
-    {
-      "userId": "1",
-      "userWalletId": "1",
-      "transactionType": "Withdraw",
-      "amount": "500",
-      "status": "success",
-      "transactionId": "T524671140899631",
-      "reference": "393750988",
-      "timestamp": "14/03/2019, 18:17:12",
-      "currencyWallet": "Naira",
-      "id": 2
-    },
-    {
-      "userId": "1",
-      "userWalletId": "1",
-      "transactionType": "Deposit",
-      "amount": "1000",
-      "status": "success",
-      "transactionId": "T648105758655660",
-      "reference": "130064584",
-      "timestamp": "14/03/2019, 19:03:02",
-      "id": 3
-    }
-  ]
+  "transactions": []
 }
