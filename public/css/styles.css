@@ -526,7 +526,6 @@ p.social-menu a i {
   }
   .aside ul {
     list-style: none;
-    padding-top: 1rem;
     width: 100%;
   }
   .aside ul li {
@@ -538,6 +537,8 @@ p.social-menu a i {
   }
   .aside ul li a {
     color: #fff;
+    padding: 1.5rem;
+    width: 100%
   }
   .aside ul li a:hover {
     text-decoration: none;

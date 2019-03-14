@@ -16,7 +16,7 @@
       "firstname": "Emmanuel",
       "lastname": "Aboderin",
       "phonenumber": "+2348156612100",
-      "email": "aboderinemanuel@gmail.com",
+      "email": "aboderinemmanuel@gmail.com",
       "username": "aboderinemma",
       "password": "qwerty1",
       "country": "Nigeria",
@@ -134,7 +134,7 @@
     {
       "userId": "1",
       "walletCurrency": "Bitcoin",
-      "balance": "0.7231640142267342",
+      "balance": "0.7227640142267342",
       "symbol": "BTC",
       "id": 3
     },
@@ -155,7 +155,7 @@
     {
       "userId": "2",
       "walletCurrency": "Bitcoin",
-      "balance": "1.3729431660186893",
+      "balance": "1.3733431660186892",
       "symbol": "BTC",
       "id": 6
     },
@@ -1056,6 +1056,54 @@
       "timestamp": "14/03/2019, 10:37:49",
       "currencyWallet": "Ethereum",
       "id": 76
+    },
+    {
+      "userId": "1",
+      "userWalletId": "3",
+      "transactionType": "Send",
+      "amount": "0.0002",
+      "status": "success",
+      "transactionId": "T227894735581252",
+      "reference": "723409080",
+      "timestamp": "14/03/2019, 12:23:07",
+      "currencyWallet": "Bitcoin",
+      "id": 77
+    },
+    {
+      "userId": "2",
+      "userWalletId": "6",
+      "transactionType": "Received",
+      "amount": "0.0002",
+      "status": "success",
+      "transactionId": "T380012752854439",
+      "reference": "764838893",
+      "timestamp": "14/03/2019, 12:23:07",
+      "currencyWallet": "Bitcoin",
+      "id": 78
+    },
+    {
+      "userId": "1",
+      "userWalletId": "3",
+      "transactionType": "Send",
+      "amount": "0.0002",
+      "status": "success",
+      "transactionId": "T574068106323312",
+      "reference": "878016155",
+      "timestamp": "14/03/2019, 12:24:54",
+      "currencyWallet": "Bitcoin",
+      "id": 79
+    },
+    {
+      "userId": "2",
+      "userWalletId": "6",
+      "transactionType": "Received",
+      "amount": "0.0002",
+      "status": "success",
+      "transactionId": "T839062018785054",
+      "reference": "422184378",
+      "timestamp": "14/03/2019, 12:24:54",
+      "currencyWallet": "Bitcoin",
+      "id": 80
     }
   ]
 }
