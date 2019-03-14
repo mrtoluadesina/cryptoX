@@ -41,6 +41,7 @@ function transactionDetails(){
         data: {get_param: 'value'}
       }).done(data => {
         localStorage.receiverId = data[0].id;
+        localStorage.receiverEmail = data[0].email;
         $.ajax({
           method: "GET",
           url: `http://localhost:3000/userWallets?userId=${localStorage.receiverId}&&walletCurrency=${currencyType}`,
@@ -75,7 +76,7 @@ function transactionDetails(){
                   data: {
                     "userId": `${userId}`,
                     "userWalletId": localStorage[currencyType + '-walletId'],
-                    "transactionType": "Send",
+                    "transactionType": `Sent ${localStorage[currencyType + '-symbol']}`,
                     "amount": `${amountToSend}`,
                     "status": "success",
                     "transactionId": `${trxref}`,
@@ -106,7 +107,7 @@ function transactionDetails(){
                     data: {
                       "userId": `${localStorage.receiverId}`,
                       "userWalletId": localStorage.receiverWallet,
-                      "transactionType": "Received",
+                      "transactionType": `Received ${localStorage[currencyType + '-symbol']}`,
                       "amount": `${amountToSend}`,
                       "status": "success",
                       "transactionId": `${trxref}`,
@@ -115,7 +116,17 @@ function transactionDetails(){
                       "currencyWallet": `${currencyType}`
                   }
                   }).done(() => {
-                      console.log('added to transactions Table - received')
+                    Email.send({
+                        Host : "smtp.gmail.com",
+                        Username : "DecaChain",
+                        Password : "Ai.,!54&dope",
+                        To : localStorage.receiverEmail,
+                        From : "decachain@gmail.com",
+                        Subject : 'You have been credited ' + currencyType,
+                        Body : `Somebody just credited you with ${localStorage[currencyType + '-symbol']} ${amountToSend}`
+                    }).then(
+                      
+                    );
                   });
                   swal({
                     text: `You have successfully sent ${localStorage[currencyType + '-symbol']} ${amountToSend}`,
