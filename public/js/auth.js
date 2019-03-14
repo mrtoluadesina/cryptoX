@@ -56,13 +56,24 @@ $('form#register').submit(e => {
               "symbol": "NGN"
             }
           }).done(() => {
+              Email.send({
+                Host : "smtp.gmail.com",
+                Username : "DecaChain",
+                Password : "Ai.,!54&dope",
+                To : localStorage.receiverEmail,
+                From : "decachain@gmail.com",
+                Subject : `Welcome to DecaChain, ${username}`,
+                Body : `You are now on the simplest cryptocurrency exchange platform ever. <br> 
+                You should update your profile first, <a href="https://decachain.herokuapp.com/settings.html" target="_blank">click here</a> to do so`
+            }).then( message => {
               swal({
-              text: "Successfully created your account",
-              icon: "success",
-              button: "Now Login"
-            }).then(() => {
-              window.location.href = "./login.html";
-            });
+                text: "Successfully created your account",
+                icon: "success",
+                button: "Login"
+              }).then(() => {
+                window.location.href = "./login.html";
+              });
+            }); 
           });
           
 
@@ -75,36 +86,6 @@ $('form#register').submit(e => {
     })
   }
 })
-// $('form#register').submit(e => {
-//   e.preventDefault();
-//   var email = $('#email').val(),
-//       phonenumber = $('#phonenumber').val(),
-//       username = $('#username').val(),
-//       password = $('#password').val();
-//   if( email && phonenumber && username && password ) {
-//     $.ajax({
-//       method: "POST",
-//       url: `${baseUrl}users`,
-//       data: {
-//         "email": `${email}`,
-//         "phonenumber": `${phonenumber}`,
-//         "username": `${username}`,
-//         "password": `${password}`,
-//         "status": 1
-//       }
-//     }).done(() => {
-//       swal({
-//         text: "Successfully created your account",
-//         icon: "success",
-//         button: "Now Login"
-//       }).then(() => {
-//         window.location.href = "./login.html";
-//       });
-//     }).fail(() => {
-//       console.log('Network error - it is not our fault!!!')
-//     })
-//   }
-// })
 $('form#login').submit(e => {
   e.preventDefault();
   var username = $('#username').val(),
