@@ -6,6 +6,7 @@ function payWithPaystack() {
         alert('You cannot pay anything less than #100')
     }
     else{
+        
         localStorage.amount = amount;
         if(amount)
         {

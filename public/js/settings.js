@@ -18,6 +18,7 @@ $(document).ready(() => {
       var firstname = $('#firstname').val(),
           lastname = $('#lastname').val(),
           phonenumber = $('#phonenumber').val(),
+          accountNumber = $('#accountNumber').val(),
           country = $('#country').val();
       if( phonenumber ) {
         $.ajax({
