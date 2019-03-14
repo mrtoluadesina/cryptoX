@@ -76,7 +76,7 @@ function transactionDetails(){
                   data: {
                     "userId": `${userId}`,
                     "userWalletId": localStorage[currencyType + '-walletId'],
-                    "transactionType": "Send",
+                    "transactionType": `Sent ${localStorage[currencyType + '-symbol']}`,
                     "amount": `${amountToSend}`,
                     "status": "success",
                     "transactionId": `${trxref}`,
@@ -107,7 +107,7 @@ function transactionDetails(){
                     data: {
                       "userId": `${localStorage.receiverId}`,
                       "userWalletId": localStorage.receiverWallet,
-                      "transactionType": "Received",
+                      "transactionType": `Received ${localStorage[currencyType + '-symbol']}`,
                       "amount": `${amountToSend}`,
                       "status": "success",
                       "transactionId": `${trxref}`,
@@ -122,8 +122,8 @@ function transactionDetails(){
                         Password : "Ai.,!54&dope",
                         To : localStorage.receiverEmail,
                         From : "decachain@gmail.com",
-                        Subject : `You have been credited ${currencyType}`,
-                        Body : `Somebody just credited you with ${amountToSend} ${currencyType}s`
+                        Subject : 'You have been credited ' + currencyType,
+                        Body : `Somebody just credited you with ${localStorage[currencyType + '-symbol']} ${amountToSend}`
                     }).then(
                       
                     );

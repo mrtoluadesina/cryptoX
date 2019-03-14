@@ -31,9 +31,9 @@ $.ajax({
         $('#Stellar-Lumens').hide();
         if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "BTCUSDT";}
         else if(localStorage.currencyClicked === "Ethereum"){apiCon =  "LTCBTC";}
-        else if(localStorage.currencyClicked === "Ripple"){apiCon =  "BNBBTC";}
-        else if(localStorage.currencyClicked === "Bitcoin-Cash"){apiCon =  "NEOBTC";}
-        else if(localStorage.currencyClicked === "Stellar-Lumens"){apiCon =  "SNTETH";}
+        else if(localStorage.currencyClicked === "Ripple"){apiCon =  "XRPBTC";}
+        else if(localStorage.currencyClicked === "Bitcoin-Cash"){apiCon =  "BCHBTC";}
+        else if(localStorage.currencyClicked === "Stellar-Lumens"){apiCon =  "XLMBTC";}
         
         exchange_currency = 0; 
     }else if(selected === "Naira"){
@@ -45,10 +45,10 @@ $.ajax({
         $('#Bitcoin-Cash').hide();
         $('#Stellar-Lumens').hide();
         if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "BTCUSDT";}
-        else if(localStorage.currencyClicked === "Ethereum"){apiCon =  "LTCBTC";}
-        else if(localStorage.currencyClicked === "Ripple"){apiCon =  "BNBBTC";}
-        else if(localStorage.currencyClicked === "Bitcoin-Cash"){apiCon =  "NEOBTC";}
-        else if(localStorage.currencyClicked === "Stellar-Lumens"){apiCon =  "SNTETH";}
+        else if(localStorage.currencyClicked === "Ethereum"){apiCon =  "ETHUSDC";}
+        else if(localStorage.currencyClicked === "Ripple"){apiCon =  "XRPUSDC";}
+        else if(localStorage.currencyClicked === "Bitcoin-Cash"){apiCon =  "BCHABCUSDT";}
+        else if(localStorage.currencyClicked === "Stellar-Lumens"){apiCon =  "XLMTUSD";}
         
         exchange_currency = 1; 
     }else if(selected === "Ethereum"){
@@ -59,7 +59,7 @@ $.ajax({
         $('#Ripple').hide();
         $('#Bitcoin-Cash').hide();
         $('#Stellar-Lumens').hide();
-        if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "BCHABCPAX";}
+        if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "ETHBTC";}
         else if(localStorage.currencyClicked === "Ethereum"){apiCon =  "LTCBTC";}
         else if(localStorage.currencyClicked === "Ripple"){apiCon =  "BNBBTC";}
         else if(localStorage.currencyClicked === "Bitcoin-Cash"){apiCon =  "NEOBTC";}
@@ -73,7 +73,7 @@ $.ajax({
         $('#Ripple').show();
         $('#Bitcoin-Cash').hide();
         $('#Stellar-Lumens').hide();
-        if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "BCHABCPAX";}
+        if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "XRPBTC";}
         else if(localStorage.currencyClicked === "Ethereum"){apiCon =  "LTCBTC";}
         else if(localStorage.currencyClicked === "Ripple"){apiCon =  "BNBBTC";}
         else if(localStorage.currencyClicked === "Bitcoin-Cash"){apiCon =  "NEOBTC";}
@@ -87,7 +87,7 @@ $.ajax({
         $('#Ripple').hide();
         $('#Bitcoin-Cash').show();
         $('#Stellar-Lumens').hide();
-        if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "LTCBTC";}
+        if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "BCHABCBTC";}
         else if(localStorage.currencyClicked === "Ethereum"){apiCon =  "BCHABCPAX";}
         else if(localStorage.currencyClicked === "Ripple"){apiCon =  "BNBBTC";}
         else if(localStorage.currencyClicked === "Bitcoin-Cash"){apiCon =  "NEOBTC";}
@@ -101,7 +101,7 @@ $.ajax({
         $('#Ripple').hide();
         $('#Bitcoin-Cash').hide();
         $('#Stellar-Lumens').show();
-        if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "BCHABCPAX";}
+        if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "XLMBTC";}
         else if(localStorage.currencyClicked === "Ethereum"){apiCon =  "LTCBTC";}
         else if(localStorage.currencyClicked === "Ripple"){apiCon =  "BNBBTC";}
         else if(localStorage.currencyClicked === "Bitcoin-Cash"){apiCon =  "NEOBTC";}
@@ -117,6 +117,8 @@ $.ajax({
         
         withdraw_currency = 0;
     }
+    console.log('apiCon');
+    console.log(apiCon);
     $.ajax({
         type: 'GET',
         headers: {

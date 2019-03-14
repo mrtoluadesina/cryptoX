@@ -76,6 +76,18 @@
       "status": "1",
       "accountNumber": "8298739232",
       "id": 7
+    },
+    {
+      "firstname": "Esther",
+      "lastname": "Ogundijo",
+      "username": "sheyi",
+      "email": "sheyiogundijo@gmail.com",
+      "status": "1",
+      "password": "qwerty",
+      "phonenumber": "08066589871",
+      "accountNumber": "[object HTMLInputElement]",
+      "country": "Nigeria",
+      "id": 8
     }
   ],
   "wallets": [
@@ -120,7 +132,7 @@
     {
       "userId": "1",
       "walletCurrency": "Naira",
-      "balance": "318822.58",
+      "balance": "1499990.88",
       "symbol": "NGN",
       "id": 1
     },
@@ -134,7 +146,7 @@
     {
       "userId": "1",
       "walletCurrency": "Bitcoin",
-      "balance": "0.7227640142267342",
+      "balance": "0.6967640142267342",
       "symbol": "BTC",
       "id": 3
     },
@@ -148,35 +160,35 @@
     {
       "userId": "1",
       "walletCurrency": "Bitcoin-Cash",
-      "balance": "111664.56",
+      "balance": "111664.80213",
       "symbol": "BCH",
       "id": 5
     },
     {
       "userId": "2",
       "walletCurrency": "Bitcoin",
-      "balance": "1.3733431660186892",
+      "balance": "1.4013431660186892",
       "symbol": "BTC",
       "id": 6
     },
     {
       "userId": "2",
       "walletCurrency": "Ethereum",
-      "balance": "20301.476204123755",
+      "balance": "20000.476204123755",
       "symbol": "ETH",
       "id": 7
     },
     {
-      "userId": "4",
+      "userId": "8",
       "walletCurrency": "Naira",
-      "balance": "0",
+      "balance": "1000",
       "symbol": "NGN",
       "id": 8
     },
     {
       "userId": "1",
       "walletCurrency": "Ethereum",
-      "balance": "47165.60",
+      "balance": "47466.6",
       "symbol": "ETH",
       "id": 9
     },
@@ -214,6 +226,27 @@
       "balance": "0",
       "symbol": "ETH",
       "id": 14
+    },
+    {
+      "userId": "8",
+      "walletCurrency": "Naira",
+      "balance": "0",
+      "symbol": "NGN",
+      "id": 15
+    },
+    {
+      "userId": "8",
+      "walletCurrency": "Bitcoin",
+      "balance": "0.00051",
+      "symbol": "BTC",
+      "id": 16
+    },
+    {
+      "userId": "8",
+      "walletCurrency": "Ethereum",
+      "balance": "9.49",
+      "symbol": "ETH",
+      "id": 17
     }
   ],
   "transactionType": [
@@ -1104,6 +1137,111 @@
       "timestamp": "14/03/2019, 12:24:54",
       "currencyWallet": "Bitcoin",
       "id": 80
+    },
+    {
+      "userId": "2",
+      "userWalletId": "7",
+      "transactionType": "Send",
+      "amount": "301",
+      "status": "success",
+      "transactionId": "T891351773094931",
+      "reference": "940160009",
+      "timestamp": "14/03/2019, 04:39:53",
+      "currencyWallet": "Ethereum",
+      "id": 81
+    },
+    {
+      "userId": "1",
+      "userWalletId": "9",
+      "transactionType": "Received",
+      "amount": "301",
+      "status": "success",
+      "transactionId": "T575992220258421",
+      "reference": "128150791",
+      "timestamp": "14/03/2019, 04:39:53",
+      "currencyWallet": "Ethereum",
+      "id": 82
+    },
+    {
+      "userId": "1",
+      "userWalletId": "3",
+      "transactionType": "Sent BTC",
+      "amount": "0.002",
+      "status": "success",
+      "transactionId": "T159640658533057",
+      "reference": "640832458",
+      "timestamp": "14/03/2019, 04:46:05",
+      "currencyWallet": "Bitcoin",
+      "id": 83
+    },
+    {
+      "userId": "2",
+      "userWalletId": "6",
+      "transactionType": "Sent BTC",
+      "amount": "0.002",
+      "status": "success",
+      "transactionId": "T147408507302723",
+      "reference": "936539139",
+      "timestamp": "14/03/2019, 04:48:25",
+      "currencyWallet": "Bitcoin",
+      "id": 84
+    },
+    {
+      "userId": "1",
+      "userWalletId": "3",
+      "transactionType": "Received BTC",
+      "amount": "0.002",
+      "status": "success",
+      "transactionId": "T406029426829151",
+      "reference": "360654695",
+      "timestamp": "14/03/2019, 04:48:26",
+      "currencyWallet": "Bitcoin",
+      "id": 85
+    },
+    {
+      "userId": "8",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "2000",
+      "status": "success",
+      "transactionId": "T338907946211248",
+      "reference": "129901797",
+      "timestamp": "14/03/2019, 05:08:37",
+      "id": 86
+    },
+    {
+      "userId": "8",
+      "transactionType": "Buy",
+      "amount": "1000",
+      "status": "success",
+      "transactionId": "T037290806679347",
+      "reference": "535848479",
+      "timestamp": "14/03/2019, 05:10:09",
+      "currencyWallet": "Bitcoin",
+      "id": 87
+    },
+    {
+      "userId": "8",
+      "transactionType": "Sell",
+      "amount": "0.0002",
+      "status": "success",
+      "transactionId": "T368303094012622",
+      "reference": "729641556",
+      "timestamp": "14/03/2019, 05:11:58",
+      "currencyWallet": "Bitcoin",
+      "id": 88
+    },
+    {
+      "userId": "1",
+      "userWalletId": "3",
+      "transactionType": "Sent BTC",
+      "amount": "0.03",
+      "status": "success",
+      "transactionId": "T333843925364927",
+      "reference": "856439676",
+      "timestamp": "14/03/2019, 05:14:06",
+      "currencyWallet": "Bitcoin",
+      "id": 89
     }
   ]
 }
