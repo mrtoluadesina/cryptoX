@@ -20,8 +20,6 @@ $('form#register').submit(e => {
       data: {get_param: 'value'}
     }).done(data => {
       var accountNumber = Math.floor(1000000000 + Math.random() * 9000000000);
-      console.log(accountNumber)
-      console.log(data);
       if (data.length !== 0 && data[0].phonenumber === phonenumber) {
         swal({
           title: "User already exists on Decachain",
