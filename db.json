@@ -120,7 +120,7 @@
     {
       "userId": "1",
       "walletCurrency": "Naira",
-      "balance": "250500",
+      "balance": "946630",
       "symbol": "NGN",
       "id": 1
     },
@@ -134,7 +134,7 @@
     {
       "userId": "1",
       "walletCurrency": "Bitcoin",
-      "balance": "0.524364014226734",
+      "balance": "0.7229640142267342",
       "symbol": "BTC",
       "id": 3
     },
@@ -155,14 +155,14 @@
     {
       "userId": "2",
       "walletCurrency": "Bitcoin",
-      "balance": "1.5727431660186892",
+      "balance": "1.3731431660186892",
       "symbol": "BTC",
       "id": 6
     },
     {
       "userId": "2",
       "walletCurrency": "Ethereum",
-      "balance": "20389.476204123755",
+      "balance": "20300.476204123755",
       "symbol": "ETH",
       "id": 7
     },
@@ -176,7 +176,7 @@
     {
       "userId": "1",
       "walletCurrency": "Ethereum",
-      "balance": "38647.567039035974",
+      "balance": "38736.567039035974",
       "symbol": "ETH",
       "id": 9
     },
