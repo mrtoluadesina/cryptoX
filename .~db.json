@@ -134,7 +134,7 @@
     {
       "userId": "1",
       "walletCurrency": "Bitcoin",
-      "balance": "0.7229640142267342",
+      "balance": "0.10090401422673381",
       "symbol": "BTC",
       "id": 3
     },
@@ -155,14 +155,14 @@
     {
       "userId": "2",
       "walletCurrency": "Bitcoin",
-      "balance": "1.3731431660186892",
+      "balance": "1.5727431660186892",
       "symbol": "BTC",
       "id": 6
     },
     {
       "userId": "2",
       "walletCurrency": "Ethereum",
-      "balance": "20300.476204123755",
+      "balance": "20389.476204123755",
       "symbol": "ETH",
       "id": 7
     },
@@ -1195,6 +1195,17 @@
       "timestamp": "14/03/2019, 02:19:25",
       "currencyWallet": "Bitcoin",
       "id": 89
+    },
+    {
+      "userId": "1",
+      "transactionType": "Sell",
+      "amount": "0.003",
+      "status": "success",
+      "transactionId": "T049578855624206",
+      "reference": "083367848",
+      "timestamp": "14/03/2019, 02:23:11",
+      "currencyWallet": "Bitcoin",
+      "id": 90
     }
   ]
 }

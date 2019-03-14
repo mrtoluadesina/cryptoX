@@ -10,12 +10,12 @@
 </head>
 <body>
   <header class="header">
-    <a href="javascript:void()">
+    <a href="/">
       <span class="logo">d</span> <span class="logo-text">decachain</span>
     </a>
     <ul class="nav">
-      <li class="hideMobile"><a href="file:///Users/user/Documents/bootcamp/decachain/login.html">Login</a></li>
-      <li><a href="file:///Users/user/Documents/bootcamp/decachain/register.html">Get Started</a></li>
+      <li class="hideMobile"><a href="./login.html">Login</a></li>
+      <li><a href="./register.html">Get Started</a></li>
     </ul>
   </header>
   <section class="wrapper">
@@ -26,6 +26,7 @@
       <form id="register" class="flex flex-col" method="">
         <h2>Register</h2>
         <input type="email" id="email" value="" placeholder="Email">
+        <input type="text" id="phonenumber" value="" placeholder="Phone Number">
         <input type="text" id="username" value="" placeholder="Username">
         <input type="password" id="password" value="" placeholder="Password">
         <input type="password" id="confirm_password" value="" placeholder="Confirm Password">
@@ -37,6 +38,7 @@
   </section> 
   <!-- <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script type="text/javascript"  src="./js/jquery.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript"  src="./js/auth.js"></script>
 </body>
 </html>

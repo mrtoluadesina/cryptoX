@@ -17,7 +17,7 @@
     </a>
     <ul class="nav">
       <li class="hideDesktop"><a href="/">Menu</a></li>
-      <li><a href="/">BTC/NGN 1,351,838</a></li>
+      <li><a id="btcNgn" href="/"></a></li>
       <li><a id="user-info" href="./settings.html">Hi, User!</a></li>
     </ul>
   </header>
@@ -38,7 +38,7 @@
                     
             <form id="newExchange" class="flex flex-col" method="">
                
-                <h2>Sell</h2>
+                <h2>Sell <span id="currBought"></span></h2>
                 <div id="loader"></div>
                         <label for="bank">To what Currency?</i></label><br>
                         <select type="text" class="form-control " id="currency-type">
@@ -50,6 +50,7 @@
                             <option value="Bitcoin-Cash" disabled>Bitcoin Cash</option>
                             <option value="Stellar-Lumens" disabled>Stellar Lumen</option>
                         </select>
+                        <div id="dprice"></div>
 
                         
                         <div style="display: none;" id="Naira">

@@ -17,7 +17,7 @@
     </a>
     <ul class="nav">
       <li class="hideDesktop"><a href="/">Menu</a></li>
-      <li><a href="/">BTC/NGN 1,351,838</a></li>
+      <li><a id="btcNgn" href="/"></a></li>
       <li><a id="user-info" href="./settings.html">Hi, User!</a></li>
     </ul>
   </header>
@@ -27,7 +27,7 @@
         <li><a href="./dashboard.html"><i class="fa fa-dashboard"></i>Dashboard</a></li>
         <li class="active"><a href="./wallets.html"><i class="fa fa-briefcase"></i>Wallets</a></li>
         <li><a href="./transactions.html"><i class="fa fa-list"></i>Transactions</a></li>
-        <li><a href="./price-alert.html"><i class="fa fa-bell"></i>Price Alert</a></li>
+        <li><a href="./price-alert.html"><i class="fa fa-bell"></i>Price Alert <sup>beta</sup></a></li>
         <li><a href="./settings.html"><i class="fa fa-gear"></i>Settings</a></li>
         <li><a id="logout" href="./login.html"><i class="fa fa-sign-out"></i>Logout</a></li>
       </ul>
@@ -38,8 +38,8 @@
                     
             <form id="newExchange" class="flex flex-col" method="">
                
-                <h2>Buy</h2>
-                <div id="loader"></div>
+                <h2>Buy <span id="currBought"></span></h2>
+                  <div id="loader"></div>
                         <label for="bank">With what Currency?</i></label><br>
                         <select type="text" class="form-control " id="currency-type">
                             <option selected>Choose</option>
@@ -50,59 +50,58 @@
                             <option value="Bitcoin-Cash" disabled>Bitcoin Cash</option>
                             <option value="Stellar-Lumens" disabled>Stellar Lumen</option>
                         </select>
+                        <div id="dprice"></div>
 
                         
                         <div style="display: none;" id="Naira">
                             <input id="Naira-amount" name="Naira-deposit" placeholder="How much Naira are you exchanging?" /><br>
-                            <input id="confirmCost" type="button" value="Confirm Price">
+                            <input id="confirmCost" type="button" value="confirm Price">
                             <span id="Naira-equivalent"></span><br>
                         </div>
                         <div style="display: none;" id="Bitcoin">
-                            <input id="Bitcoin-amount" name="Bitcoin-deposit" placeholder="How much Bitcoin are you exchanging?" /><br>
-                            <input id="confirmCost" type="button" value="Confirm Price">
+                            <input id="Bitcoin-amount" name="Bitcoin-deposit" placeholder="How much Naira are you exchanging?" /><br>
+                            <input id="confirmCost" type="button" value="confirm Price">
                             <span id="Bitcoin-equivalent"></span><br>
                         </div>
                         <div style="display: none;" id="Ethereum">
                             <input id="Ethereum-amount" name="Ethereum-deposit" placeholder="How much Ethereum are you exchanging?" /><br>
-                            <input id="confirmCost" type="button" value="Confirm Price">
+                            <input id="confirmCost" type="button" value="confirm Price">
                             <span id="Ethereum-equivalent"></span><br>
                         </div>
                         <div style="display: none;" id="Ripple">
                             <input id="Ripple-amount" name="Ripple-deposit" placeholder="How much Ripple are you exchanging?" /><br>
-                            <input id="confirmCost" type="button" value="Confirm Price">
+                            <input id="confirmCost" type="button" value="confirm Price">
                             <span id="Ripple-equivalent"></span><br>
                         </div>
                         <div style="display: none;" id="Bitcoin-Cash">
                             <input id="Bitcoin-Cash-amount" name="Bitcoin-Cash-deposit" placeholder="How much Bitcoin-Cash are you exchanging?" /><br>
-                           <input id="confirmCost" type="button" value="Confirm Price">
+                           <input id="confirmCost" type="button" value="confirm Price">
                            <span id="Bitcoin-Cash-equivalent"></span><br>
                         </div>
                         <div style="display: none;" id="Stellar-Lumens">
                             <input id="Stellar-Lumens-amount" name="Stellar-Lumens-deposit" placeholder="How much Stellar-Lumens are you exchanging?" /><br>
-                            <input id="confirmCost" type="button" value="Confirm Price">
+                            <input id="confirmCost" type="button" value="confirm Price">
                             <span id="Stellar-Lumens-equivalent"></span><br>
                         </div>
+                        
                         
                 
                 <span id="error" style="color: red"></span>
                 
                 <input type="submit" id="exchange" value="BUY" disabled>
               </form>
-            <!-- <button id="addWallet"> + Add Wallet</button> -->
         </div>
       </div>
     </div>
   </section>
-  
+  <!-- <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   
   <script type="text/javascript" src="./js/jquery.js"></script>
   <script type="text/javascript" src="https://js.paystack.co/v1/inline.js"></script>  
   <script type="text/javascript" src="./js/paystack.js"></script>
-
-  <script type="text/javascript"  src="./js/dashboard.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script type="text/javascript"  src="./js/dashboard.js"></script>
   <script type="text/javascript"  src="./js/exchanges.js"></script>
-  <script type="text/javascript"  src="./js/idle.js"></script>
   
   
 </body>

@@ -4,6 +4,7 @@ var userId = localStorage.userId;
 localStorage.selectedCurrency = $('#currency-type').val();
 var apiCon;
 
+$('#currBought').text(localStorage.currencyClicked);
 $.ajax({
     method: 'GET',
     url: `http://localhost:3000/userWallets?userId=${userId}`,
@@ -114,7 +115,25 @@ $.ajax({
         
         withdraw_currency = 0;
     }
-    
+    $.ajax({
+        type: 'GET',
+        headers: {
+            apiKey: 'vmPUZE6mv9SD5VNHk4HlWFsOr6aKE2zvsw0MuIgwCIPy6utIco14y7Ju91duEh8A',
+            secretKey: 'NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j'
+        },
+        url: 'https://cors-anywhere.herokuapp.com/https://api.binance.com/api/v1/ticker/price',
+        data: { symbol: apiCon }
+    }).done(function (data){
+        var dprice = Number(data.price);
+        var dcurrency = localStorage.selectedCurrency;
+        if(selected = "Naira"){
+            dprice *= 365;
+        }
+        dprice = dprice.toFixed(2);
+        dprice = dprice.toLocaleString();
+        var click = localStorage.currencyClicked;
+        $('#dprice').text(`1 ${click} : ${dprice} ${dcurrency}`);
+    })
 });
     $('#currency-type option[value="' + localStorage.currencyClicked + '"]').prop('disabled', true);
 })
@@ -175,7 +194,7 @@ $('#Stellar-Lumens-amount').change(() => {
 
 function transactionDetails(){
 
-    localStorage.timestamp = (new Date).toLocaleString();
+    localStorage.timestamp = (new Date).toLocaleString('en-GB');
 
     var trxref = "T";
     //Generate Transaction ID
@@ -312,7 +331,12 @@ function transactSell(selector,selector1){
                 alert('Network Error! Please try again later!');
             });
         } else {
-            alert('Your money no reach')
+          swal({
+            text: 'Your money no reach',
+            icon: "warning"
+          }).then(()=> {
+            location.reload(true);
+          });
         }
     })
 }

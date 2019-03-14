@@ -4,14 +4,15 @@ var userId = localStorage.userId;
 // localStorage.selectedCurrency = $('#currency-type').val();
 var apiCon;
 
+$('#currBought').text(localStorage.currencyClicked);
 $.ajax({
     method: 'GET',
     url: `http://localhost:3000/userWallets?userId=${userId}`,
     data: {get_param: 'value'}
 }).done((data) => {
     $.each(data, (index, el) => {
-        console.log('data');
-        console.log(data);
+        // console.log('data');
+        // console.log(data);
         $('#currency-type option[value="' + el.walletCurrency + '"]').prop('disabled', false);
         
     });
@@ -86,8 +87,8 @@ $.ajax({
         $('#Ripple').hide();
         $('#Bitcoin-Cash').show();
         $('#Stellar-Lumens').hide();
-        if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "BCHABCPAX";}
-        else if(localStorage.currencyClicked === "Ethereum"){apiCon =  "LTCBTC";}
+        if(localStorage.currencyClicked === "Bitcoin"){apiCon =  "LTCBTC";}
+        else if(localStorage.currencyClicked === "Ethereum"){apiCon =  "BCHABCPAX";}
         else if(localStorage.currencyClicked === "Ripple"){apiCon =  "BNBBTC";}
         else if(localStorage.currencyClicked === "Bitcoin-Cash"){apiCon =  "NEOBTC";}
         else if(localStorage.currencyClicked === "Stellar-Lumens"){apiCon =  "SNTETH";} 
@@ -116,14 +117,78 @@ $.ajax({
         
         withdraw_currency = 0;
     }
-    
+    $.ajax({
+        type: 'GET',
+        headers: {
+            apiKey: 'vmPUZE6mv9SD5VNHk4HlWFsOr6aKE2zvsw0MuIgwCIPy6utIco14y7Ju91duEh8A',
+            secretKey: 'NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j'
+        },
+        url: 'https://cors-anywhere.herokuapp.com/https://api.binance.com/api/v1/ticker/price',
+        data: { symbol: apiCon }
+    }).done(function (data){
+        var dprice = Number(data.price);
+        var dcurrency = localStorage.selectedCurrency;
+        if(selected = "Naira"){
+            dprice *= 365;
+        }
+        dprice = dprice.toFixed(2);
+        dprice = dprice.toLocaleString();
+        var click = localStorage.currencyClicked;
+        $('#dprice').text(`1 ${click} : ${dprice} ${dcurrency}`);
+
+        selected = localStorage.selectedCurrency;
+        // selected = $('#currency-type').val();
+        console.log('selected');
+        console.log(selected);
+        $(`#${selected}-amount`).change(() => {
+            console.log('it got here');
+            var nai = $('#currency-type').val();
+            var selector = `#${nai}-amount` + "";
+            var selector1 = `#${nai}-equivalent` + "";
+            console.log(selector);
+            console.log(selector1);
+
+
+            transactBuy(selector,selector1);
+            
+        })
+
+    }).fail(()=>{
+        // alert('Cannot retrieve rate at this time');
+        swal({
+            text: 'Cannot retrieve rate at this time',
+            icon: "warning"
+          }).then(()=> {
+            location.reload(true);
+          })
+    })
 });
     $('#currency-type option[value="' + localStorage.currencyClicked + '"]').prop('disabled', true);
 })
 
 
+// selected = localStorage.selectedCurrency;
+// // selected = $('#currency-type').val();
+// console.log('selected');
+// console.log(selected);
+// $(`#${selected}-amount`).change(() => {
+//     console.log('it got here');
+//     var nai = $('#currency-type').val();
+//     var selector = `#${nai}-amount` + "";
+//     var selector1 = `#${nai}-equivalent` + "";
+//     console.log(selector);
+//     console.log(selector1);
 
-$('#Naira-amount').change(() => {
+
+//     transactBuy(selector,selector1);
+    
+// })
+
+
+/* $('#Naira-amount').change(() => {
+    
+    console.log('selected1');
+    console.log(selected);
 
     var nai = $('#currency-type').val();
     var selector = `#${nai}-amount` + "";
@@ -132,11 +197,21 @@ $('#Naira-amount').change(() => {
 
     transactBuy(selector,selector1);
     
-})
-$('#Ethereum-amount').change(() => {
+}) */
+/* $('#Ethereum-amount').change(() => {
     var val =  $('#Ethereum-amount').val();
     console.log(val);
     $('#Ethereum-equivalent').text(val);
+    
+}) */
+/* $('#Ethereum-amount').change(() => {
+    
+    var nai = $('#currency-type').val();
+    var selector = `#${nai}-amount` + "";
+    var selector1 = `#${nai}-equivalent` + "";
+    console.log(selector);
+
+    transactBuy(selector,selector1);
 })
 $('#Ripple-amount').change(() => {
     var val =  $('#Ripple-amount').val();
@@ -144,6 +219,16 @@ $('#Ripple-amount').change(() => {
     $('#Ripple-equivalent').text(val);
 })
 $('#Bitcoin-Cash-amount').change(() => {
+
+    var nai = $('#currency-type').val();
+    var selector = `#${nai}-amount` + "";
+    var selector1 = `#${nai}-equivalent` + "";
+    console.log(selector);
+
+    transactBuy(selector,selector1);
+    
+}) */
+/* $('#Bitcoin-Cash-amount').change(() => {
    
     var val =  $('#Bitcoin-Cash-amount').val();
     var selected = localStorage.selectedCurrency;
@@ -173,6 +258,8 @@ $('#Bitcoin-Cash-amount').change(() => {
                 console.log(data);
                 console.log(Number(data.price));
                 value = parseFloat(val1/(Number(data.price)));
+                value = toFixed(2);
+                value = value.toLocaleString();
                 console.log(value);
                 localStorage.currencyBot = value;
                 $('#Bitcoin-Cash-equivalent').text(value);
@@ -227,16 +314,16 @@ $('#Bitcoin-Cash-amount').change(() => {
             alert('Your money no reach')
         }
     })
-})
-$('#Stellar-Lumens-amount').change(() => {
+}) */
+/* $('#Stellar-Lumens-amount').change(() => {
     var val =  $('#Stellar-Lumens-amount').val();
     console.log(val);
     $('#Stellar-Lumens-equivalent').text(val);
-})
+}) */
 
 function transactionDetails(){
 
-    localStorage.timestamp = (new Date).toLocaleString();
+    localStorage.timestamp = (new Date).toLocaleString('en-GB');
 
     var trxref = "T";
     //Generate Transaction ID
@@ -258,6 +345,7 @@ function transactionDetails(){
 }
 
 function transactBuy(selector,selector1){
+    // console.log('it got here');
     var val =  $(selector).val();
     var selected = localStorage.selectedCurrency;
     $('#loader').show();
@@ -271,6 +359,7 @@ function transactBuy(selector,selector1){
             localStorage.currentBalance = data[0].balance;
             localStorage.walletCurrency = data[0].walletCurrency;
             localStorage.symbol = data[0].symbol;
+            var esymbol = localStorage.currencyClickedSymbol;
             localStorage.walletId = data[0].id;
             $.ajax({
                 type: 'GET',
@@ -284,9 +373,10 @@ function transactBuy(selector,selector1){
                 var val1 = val/365;
                 
                 value = parseFloat(val1/(Number(data.price)));
-             
+                value = value.toFixed(5);
+                value = value.toLocaleString();
                 localStorage.currencyBot = value;
-                $(selector1).text(value);
+                $(selector1).text(`${value} ${esymbol}`);
                 $('#loader').hide();
                 $('#exchange').click((e) =>{
                     e.preventDefault();
@@ -361,10 +451,21 @@ function transactBuy(selector,selector1){
                 })
             }).fail(() => {
                 console.log('Failed...');
-                alert('Network Error! Please try again later!');
+                // alert('Network Error! Please try again later!');
+                swal({
+                    text: 'Network Error! Please try again later!',
+                    icon: "warning"
+                  }).then(()=> {
+                    location.reload(true);
+                  })
             });
         } else{
-            alert('Your money no reach')
+            swal({
+              text: 'Your money no reach',
+              icon: "warning"
+            }).then(()=> {
+              location.reload(true);
+            })
         }
     })
 }
