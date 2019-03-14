@@ -17,7 +17,7 @@
     </a>
     <ul class="nav">
       <li class="hideDesktop"><a href="/">Menu</a></li>
-      <li><a href="/">BTC/NGN 1,351,838</a></li>
+      <li><a id="btcNgn" href="/"></a></li>
       <li><a id="user-info" href="./settings.html">Hi, User!</a></li>
     </ul>
   </header>
@@ -38,23 +38,30 @@
                     
             <form id="newExchange" class="flex flex-col" method="">
                
-                <h2>Buy Bitcoin</h2>
+                <h2>Buy <span id="currBought"></span></h2>
                   <div id="loader"></div>
                         <label for="bank">With what Currency?</i></label><br>
                         <select type="text" class="form-control " id="currency-type">
                             <option selected>Choose</option>
                             <option value="Naira" disabled>Naira</option>
+                            <option value="Bitcoin" disabled>Bitcoin</option>
                             <option value="Ethereum" disabled>Ethereum</option>
                             <option value="Ripple" disabled>Ripple</option>
                             <option value="Bitcoin-Cash" disabled>Bitcoin Cash</option>
                             <option value="Stellar-Lumens" disabled>Stellar Lumen</option>
                         </select>
+                        <div id="dprice"></div>
 
                         
                         <div style="display: none;" id="Naira">
                             <input id="Naira-amount" name="Naira-deposit" placeholder="How much Naira are you exchanging?" /><br>
                             <input id="confirmCost" type="button" value="confirm Price">
                             <span id="Naira-equivalent"></span><br>
+                        </div>
+                        <div style="display: none;" id="Bitcoin">
+                            <input id="Bitcoin-amount" name="Bitcoin-deposit" placeholder="How much Naira are you exchanging?" /><br>
+                            <input id="confirmCost" type="button" value="confirm Price">
+                            <span id="Bitcoin-equivalent"></span><br>
                         </div>
                         <div style="display: none;" id="Ethereum">
                             <input id="Ethereum-amount" name="Ethereum-deposit" placeholder="How much Ethereum are you exchanging?" /><br>
@@ -77,6 +84,7 @@
                             <span id="Stellar-Lumens-equivalent"></span><br>
                         </div>
                         
+                        
                 
                 <span id="error" style="color: red"></span>
                 
@@ -91,7 +99,7 @@
   <script type="text/javascript" src="./js/jquery.js"></script>
   <script type="text/javascript" src="https://js.paystack.co/v1/inline.js"></script>  
   <script type="text/javascript" src="./js/paystack.js"></script>
-
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script type="text/javascript"  src="./js/dashboard.js"></script>
   <script type="text/javascript"  src="./js/exchanges.js"></script>
   

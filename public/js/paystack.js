@@ -28,7 +28,7 @@ function payWithPaystack() {
                     //using transaction reference as post data
                     localStorage.res = JSON.stringify(response);
                     localStorage.transaction = 1;
-                    localStorage.timestamp = (new Date).toLocaleString();
+                    localStorage.timestamp = (new Date).toLocaleString('en-GB');
                     window.location.href = './wallets.html'
                     // localStorage.res1 = response.message;
                     // console.log(res1);

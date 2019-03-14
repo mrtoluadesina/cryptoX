@@ -43,7 +43,7 @@ e.preventDefault();
         console.log(balance);
         var amt = $('#naira-amount').val();
         localStorage.amount = amt;
-        localStorage.timestamp = (new Date).toLocaleString();
+        localStorage.timestamp = (new Date).toLocaleString('en-GB');
         if(balance >= amt){
             balance-=amt;
             console.log(balance);

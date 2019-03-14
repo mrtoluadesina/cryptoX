@@ -21,13 +21,13 @@ $(document).ready(() => {
               <p>Balance: ${el.symbol} ${el.balance}</p>
             </div>
             <div class="card-bottom">
-              <a id="${el.walletCurrency}" class="${el.walletCurrency}-${el.walletCurrency === 'Naira' ? 'Withdraw' : 'Buy' }" href="${el.walletCurrency === 'Naira' ? 'Withdraw' : 'Buy' }.html">${el.walletCurrency === 'Naira' ? 'Withdraw' : 'Buy' }</a>
-              <a id="${el.walletCurrency}" class="${el.walletCurrency}-${el.walletCurrency === 'Naira' ? 'Deposit' : 'Sell' }" href="${el.walletCurrency === 'Naira' ? 'Deposit' : 'Sell' }.html">${el.walletCurrency === 'Naira' ? 'Deposit' : 'Sell' }</a>
+              <a id="${el.walletCurrency}" class="${el.walletCurrency}-${el.walletCurrency === 'Naira' ? 'Withdraw' : 'Buy' } ${el.walletCurrency}" href="${el.walletCurrency === 'Naira' ? 'Withdraw' : 'Buy' }.html">${el.walletCurrency === 'Naira' ? 'Withdraw' : 'Buy' }</a>
+              <a id="${el.walletCurrency}" class="${el.walletCurrency}-${el.walletCurrency === 'Naira' ? 'Deposit' : 'Sell' } ${el.walletCurrency}" href="${el.walletCurrency === 'Naira' ? 'Deposit' : 'Sell' }.html">${el.walletCurrency === 'Naira' ? 'Deposit' : 'Sell' }</a>
             </div>
           </div>
         `);
         $('#selectCurrency option[value="' + el.walletCurrency + '"]').attr('disabled', 'disabled');
-        $(`#${el.walletCurrency}`).click(() => {localStorage.currencyClicked = el.walletCurrency; localStorage.currencyClickedBalance = el.balance; localStorage.currencyClickedSymbol = el.symbol;});
+        $(`.${el.walletCurrency}`).click(() => {localStorage.currencyClicked = el.walletCurrency; localStorage.currencyClickedBalance = el.balance; localStorage.currencyClickedSymbol = el.symbol;});
       });
     }
   })
