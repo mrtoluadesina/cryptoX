@@ -36,7 +36,7 @@ e.preventDefault();
 // }
         $.ajax({
         method: "GET",
-        url: `http://localhost:3000/userWallets?userId=${userId}&walletCurrency=Naira`,
+        url: `${baseUrl}userWallets?userId=${userId}&walletCurrency=Naira`,
         data: { get_param: 'value'}
     }).done(data => {    
         balance = parseFloat(data[0].balance);
@@ -53,7 +53,7 @@ e.preventDefault();
                 if(el.walletCurrency === 'Naira') {
                   $.ajax({
                     method: "PUT",
-                    url: `http://localhost:3000/userWallets/${userId}`,
+                    url: `${baseUrl}userWallets/${userId}`,
                     data: {
                       "userId": `${userId}`,
                       "walletCurrency": `${el.walletCurrency}`,
@@ -80,7 +80,7 @@ e.preventDefault();
 
                     $.ajax({
                         method: "POST",
-                        url: "http://localhost:3000/transactions",
+                        url: `${baseUrl}transactions`,
                         data: {
                           "userId": `${userId}`,
                           "userWalletId": 1,

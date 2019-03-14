@@ -6,21 +6,21 @@ $(document).ready(() => {
   var userId = localStorage.userId;
   $.ajax({
     method: "GET",
-    url: `http://localhost:3000/users?id=${userId}`,
+    url: `${baseUrl}users?id=${userId}`,
     data: { get_param: 'value'}
   }).done(data => {
     data[0].firstname === undefined ? $('#user-info').text(`Welcome ${data[0].username}`) : $('#user-info').text(`Welcome ${data[0].firstname}`);
   });
   $.ajax({
     method: "GET",
-    url: `http://localhost:3000/userWallets?userId=${userId}`,
+    url: `${baseUrl}userWallets?userId=${userId}`,
     data: { get_param: 'value'}
   }).done(data => {
     $('#walletNo').text(`${data.length}`)
   })
   $.ajax({
     method: "GET",
-    url: `http://localhost:3000/transactions?userId=${userId}`,
+    url: `${baseUrl}transactions?userId=${userId}`,
     data: { get_param: 'value'}
   }).done(data => {
     $('#transNo').text(`${data.length}`)
