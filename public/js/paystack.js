@@ -3,7 +3,10 @@ var res;
 function payWithPaystack() {
     var amount = $('#naira-amount').val();
     if(amount <= 100){
-        alert('You cannot pay anything less than #100')
+        swal({
+          text: 'Amount to deposit has to be more than #100',
+          icon: 'warning'
+        })
     }
     else{
         
@@ -31,25 +34,10 @@ function payWithPaystack() {
                     localStorage.transaction = 1;
                     localStorage.timestamp = (new Date).toLocaleString('en-GB');
                     window.location.href = './wallets.html'
-                    // localStorage.res1 = response.message;
-                    // console.log(res1);
-
-                    // // console.log(response);
-                    // $.post("naira-deposit.html", {reference:response.reference}, function(status){
-                    //     if(status == "success"){
-                    //         //successful transaction
-                    //         console.log('Transaction was successful!!!');
-                    //         alert('Transaction was successful!');
-                    //         console.log(amount) ;
-                    //     }
-                    //     else
-                    //         //transaction failed
-                    //         alert(response);
-                    // });
+                    
                 },
                 onClose: function () {
                     //when the user close the payment modal
-                    console.log('Transaction cancelled');
                     swal({
                       text: 'Transaction cancelled',
                       icon: 'warning'
@@ -61,11 +49,12 @@ function payWithPaystack() {
             handler.openIframe(); //open the paystack's payment modal
         }else
         {
-            alert('You have not stated any amount');
+            swal({
+              text: 'You have not stated any amount',
+              icon: 'warning'
+            });
         }
     }
     
     
 }
-// console.log('Local storage');
-// console.log(localStorage.response);

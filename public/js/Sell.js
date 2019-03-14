@@ -145,7 +145,6 @@ $('#Naira-amount').change(() => {
     var nai = $('#currency-type').val();
     var selector = `#${nai}-amount` + "";
     var selector1 = `#${nai}-equivalent` + "";
-    console.log(selector);
 
     transactSell(selector,selector1);
     
@@ -155,7 +154,6 @@ $('#Ethereum-amount').change(() => {
     var nai = $('#currency-type').val();
     var selector = `#${nai}-amount` + "";
     var selector1 = `#${nai}-equivalent` + "";
-    console.log(selector);
 
     transactSell(selector,selector1);
 
@@ -165,7 +163,6 @@ $('#Ripple-amount').change(() => {
     var nai = $('#currency-type').val();
     var selector = `#${nai}-amount` + "";
     var selector1 = `#${nai}-equivalent` + "";
-    console.log(selector);
 
     transactSell(selector,selector1);
 
@@ -175,7 +172,6 @@ $('#Bitcoin-Cash-amount').change(() => {
     var nai = $('#currency-type').val();
     var selector = `#${nai}-amount` + "";
     var selector1 = `#${nai}-equivalent` + "";
-    console.log(selector);
 
     transactSell(selector,selector1);
 
@@ -185,7 +181,6 @@ $('#Stellar-Lumens-amount').change(() => {
     var nai = $('#currency-type').val();
     var selector = `#${nai}-amount` + "";
     var selector1 = `#${nai}-equivalent` + "";
-    console.log(selector);
 
     transactSell(selector,selector1);
 
@@ -201,14 +196,12 @@ function transactionDetails(){
     for(var i=1;i<=15+(Math.trunc( Math.random()));i++){
         trxref += Math.trunc(10 * (Math.random()));
     }
-    console.log(trxref);
     
     var ref = "";
     //Generate Reference #
     for(var i=1;i<=9;i++){
         ref += Math.trunc(10 * (Math.random()));
     }
-    console.log(ref);
 
     return {'trxref': trxref,
             'ref': ref};
@@ -224,16 +217,10 @@ function transactSell(selector,selector1){
         url: `${baseUrl}userWallets?userId=${userId}&walletCurrency=${selected}`,
         data: { get_param: 'value'}
     }).done(data => {
-        console.log('datap');
-        console.log(data);
-        console.log('val');
-        console.log(val);
-        console.log(Number(data[0].balance));
         
         if (val <= Number(data[0].balance)) {
             localStorage.currentBalance = data[0].balance;
             localStorage.walletCurrency = data[0].walletCurrency;
-            // localStorage.symbol = data[0].symbol;
             localStorage.walletId = data[0].id;
             $.ajax({
                 type: 'GET',
@@ -245,11 +232,7 @@ function transactSell(selector,selector1){
                 data: { symbol: apiCon }
             }).done(function (data){
                 var val1 = val*365;
-                console.log(val1);
-                console.log(data);
-                console.log(Number(data.price));
                 value = parseFloat(val1*(Number(data.price)));
-                console.log(value);
                 localStorage.currencyBot = value;
                 $(selector1).text(value);
                 $('#loader').hide();
@@ -274,14 +257,10 @@ function transactSell(selector,selector1){
                                 url: `${baseUrl}userWallets?userId=${userId}&walletCurrency=${curr}`,
                                 data: { get_param: 'value' }
                             }).done(data => {
-                                console.log('datar');
-                                console.log(data);
                                 // var newVal = parseFloat(Number(localStorage.currencyClickedBalance) + Number(localStorage.currencyBot));
                                 var newVal = parseFloat(Number(data[0].balance) + Number(localStorage.currencyBot)).toFixed(2);
                                 var currId = data[0].id;
                                 localStorage.symbol = data[0].symbol;
-                                // console.log('currId');
-                                // console.log(currId);
                                 $.ajax({
                                     method: 'PUT',
                                     url: `${baseUrl}userWallets/${currId}`,
@@ -319,7 +298,10 @@ function transactSell(selector,selector1){
                                             location.href = "./wallets.html";
                                           })
                                       }).fail(() => {
-                                        alert('Failed to add to transaction.')
+                                        swal({
+                                          text: 'Failed to add to transaction.',
+                                          icon: 'danger'
+                                        })
                                       });
                                 })
                             })
@@ -327,8 +309,10 @@ function transactSell(selector,selector1){
                     }
                 })
             }).fail(() => {
-                console.log('Failed...');
-                alert('Network Error! Please try again later!');
+                swal({
+                  text: 'Network Error! Please try again later!',
+                  icon: 'danger'
+                });
             });
         } else {
           swal({

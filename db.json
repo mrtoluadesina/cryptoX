@@ -1,14 +1,6 @@
 {
   "users": [
-    {
-      "email": "tadesina90@gmail.com",
-      "phonenumber": "08188193688",
-      "username": "toluadesina",
-      "password": "U2FsdGVkX19stSifm8nSc4hPd5w5Sc+gyazlEHvOCOg=",
-      "status": "1",
-      "accountNumber": "8829789188",
-      "id": 1
-    }
+    
   ],
   "wallets": [
     {
@@ -49,13 +41,7 @@
     }
   ],
   "userWallets": [
-    {
-      "userId": "1",
-      "walletCurrency": "Naira",
-      "balance": "0",
-      "symbol": "NGN",
-      "id": 1
-    }
+   
   ],
   "transactionType": [
     {
@@ -75,5 +61,7 @@
       "type": "Sell"
     }
   ],
-  "transactions": []
+  "transactions": [
+    
+  ]
 }
