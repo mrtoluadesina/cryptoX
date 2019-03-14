@@ -31,9 +31,9 @@ userId = localStorage.userId;
 
 $('#newWithdraw').submit(function(e){
 e.preventDefault();
-if(withdraw_currency === 1){
+// if(withdraw_currency === 1){
 
-}
+// }
         $.ajax({
         method: "GET",
         url: `http://localhost:3000/userWallets?userId=${userId}&walletCurrency=Naira`,
@@ -43,9 +43,10 @@ if(withdraw_currency === 1){
         console.log(balance);
         var amt = $('#naira-amount').val();
         localStorage.amount = amt;
-        localStorage.timestamp = (new Date).toLocaleString();
+        localStorage.timestamp = (new Date).toLocaleString('en-GB');
         if(balance >= amt){
             balance-=amt;
+            balance = balance.toFixed(2);
             console.log(balance);
 
             $.each(data, (index, el) => {
@@ -61,7 +62,6 @@ if(withdraw_currency === 1){
                     }
                   }).done(() => {
                     console.log('done!')
-                    alert(`You have successfully withdrawn ${amt}`);
 
                     var trxref = "T";
                     //Generate Transaction ID
@@ -89,14 +89,19 @@ if(withdraw_currency === 1){
                           "status": "success",
                           "transactionId": `${trxref}`,
                           "reference": `${ref}`,
-                          "timestamp": `${localStorage.timestamp}`
+                          "timestamp": `${localStorage.timestamp}`,
+                          "currencyWallet": `${localStorage.currencyClicked}`
                         }
                       }).done(() => {
                         window.location.href("./wallets.html")
                       });
 
-
-                    window.location.href = "./wallets.html";
+                      swal({
+                        text: `You have successfully withdrawn ${amt}`,
+                        icon: "success"
+                      }).then(()=> {
+                        window.location.href = "./wallets.html";
+                      });
                   })
                 }
               })

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simplest way to exchange cryptocurrecy - Decachain</title>
+  <link rel="shortcut icon" href="./img/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript"  src="./js/access.js"></script>
+</head>
+<body class="dashboard">
+  <header class="header">
+    <a href="javascript:void()">
+      <span class="logo">d</span> <span class="logo-text">decachain</span>
+    </a>
+    <ul class="nav">
+      <li class="hideDesktop"><a href="/">Menu</a></li>
+      <li><a id="btcNgn" href="/"></a></li>
+      <li><a id="user-info" href="./settings.html">Hi, User!</a></li>
+    </ul>
+  </header>
+  <section class="wrapper">
+    <div id="sidebar" class="aside">
+      <ul>
+        <li><a href="./dashboard.html"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li><a href="./wallets.html"><i class="fa fa-briefcase"></i>Wallets</a></li>
+        <li class="active"><a href="./send.html"><i class="fa fa-paper-plane"></i>Send Crypto</a></li>
+        <li><a href="./transactions.html"><i class="fa fa-list"></i>Transactions</a></li>
+        <li><a href="./price-alert.html"><i class="fa fa-bell"></i>Price Alert <sup>beta</sup></a></li>
+        <li><a href="./settings.html"><i class="fa fa-gear"></i>Settings</a></li>
+        <li><a id="logout" href="./login.html"><i class="fa fa-sign-out"></i>Logout</a></li>
+      </ul>
+    </div>
+    <div class="main-content spa">
+      <div class="content-area flex">
+        <div id="" class="flex flex-col div-full">
+                    
+            <form id="sendCrypto" class="flex flex-col" method="">
+               
+                <h2>Send Cryptocurrecy</h2>
+                  <div id="loader"></div>
+                        <label for="sending">What Currency are you sending?</i></label><br>
+                        <select class="form-control " id="currencyType">
+                            <option selected>Choose</option>
+                            <option value="Bitcoin" disabled>Bitcoin</option>
+                            <option value="Ethereum" disabled>Ethereum</option>
+                            <option value="Ripple" disabled>Ripple</option>
+                            <option value="Bitcoin-Cash" disabled>Bitcoin Cash</option>
+                            <option value="Stellar-Lumens" disabled>Stellar Lumen</option>
+                        </select>
+
+                        <div id="selectedCrypto">
+                            <input id="accountNo" class="div-full" type="text" placeholder="Enter the receiver's Decachain Account Number" /><br>
+                            <input id="amountToSend" class="div-full" type="text" placeholder="Enter the amount you wish to send">
+                        </div>
+                      
+                <span id="error" style="color: red"></span>
+                
+                <input type="submit" id="sendCryptocurrency" value="SEND">
+              </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript"  src="./js/dashboard.js"></script>
+  <script type="text/javascript"  src="./js/send.js"></script>
+  
+  
+</body>
+</html>

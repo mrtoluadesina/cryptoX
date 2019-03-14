@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simplest way to exchange cryptocurrecy - Decachain</title>
+  <link rel="shortcut icon" href="./img/favicon.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript"  src="./js/access.js"></script>
+</head>
+<body class="dashboard">
+  <header class="header">
+    <a href="javascript:void()">
+      <span class="logo">d</span> <span class="logo-text">decachain</span>
+    </a>
+    <ul class="nav">
+      <li class="hideDesktop"><a href="/">Menu</a></li>
+      <li><a id="btcNgn" href="/"></a></li>
+      <li><a id="user-info" href="./settings.html">Hi, User!</a></li>
+    </ul>
+  </header>
+  <section class="wrapper">
+    <div id="sidebar" class="aside">
+      <ul>
+        <li><a href="./dashboard.html"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+        <li class="active"><a href="./wallets.html"><i class="fa fa-briefcase"></i>Wallets</a></li>
+        <li><a href="./send.html"><i class="fa fa-paper-plane"></i>Send Crypto</a></li>
+        <li><a href="./transactions.html"><i class="fa fa-list"></i>Transactions</a></li>
+        <li><a href="./price-alert.html"><i class="fa fa-bell"></i>Price Alert</a></li>
+        <li><a href="./settings.html"><i class="fa fa-gear"></i>Settings</a></li>
+        <li><a id="logout" href="./login.html"><i class="fa fa-sign-out"></i>Logout</a></li>
+      </ul>
+    </div>
+    <div class="main-content spa">
+      <div class="content-area flex">
+        <div id="bitcoin-buy" class="flex flex-col div-full">
+                    
+            <form id="newExchange" class="flex flex-col" method="">
+               
+                <h2>Sell <span id="currBought"></span></h2>
+                <div id="loader"></div>
+                        <label for="bank">To what Currency?</i></label><br>
+                        <select type="text" class="form-control " id="currency-type">
+                            <option selected>Choose</option>
+                            <option value="Naira" disabled>Naira</option>
+                            <option value="Bitcoin" disabled>Bitcoin</option>
+                            <option value="Ethereum" disabled>Ethereum</option>
+                            <option value="Ripple" disabled>Ripple</option>
+                            <option value="Bitcoin-Cash" disabled>Bitcoin Cash</option>
+                            <option value="Stellar-Lumens" disabled>Stellar Lumen</option>
+                        </select>
+                        <div id="dprice"></div>
+
+                        
+                        <div style="display: none;" id="Naira">
+                            <input id="Naira-amount" name="Naira-deposit" placeholder="How much Naira are you exchanging?" /><br>
+                            <input id="confirmCost" type="button" value="Confirm Price">
+                            <span id="Naira-equivalent"></span><br>
+                        </div>
+                        <div style="display: none;" id="Bitcoin">
+                            <input id="Bitcoin-amount" name="Bitcoin-deposit" placeholder="How much Bitcoin are you exchanging?" /><br>
+                            <input id="confirmCost" type="button" value="Confirm Price">
+                            <span id="Bitcoin-equivalent"></span><br>
+                        </div>
+                        <div style="display: none;" id="Ethereum">
+                            <input id="Ethereum-amount" name="Ethereum-deposit" placeholder="How much Ethereum are you exchanging?" /><br>
+                            <input id="confirmCost" type="button" value="Confirm Price">
+                            <span id="Ethereum-equivalent"></span><br>
+                        </div>
+                        <div style="display: none;" id="Ripple">
+                            <input id="Ripple-amount" name="Ripple-deposit" placeholder="How much Ripple are you exchanging?" /><br>
+                            <input id="confirmCost" type="button" value="Confirm Price">
+                            <span id="Ripple-equivalent"></span><br>
+                        </div>
+                        <div style="display: none;" id="Bitcoin-Cash">
+                            <input id="Bitcoin-Cash-amount" name="Bitcoin-Cash-deposit" placeholder="How much Bitcoin-Cash are you exchanging?" /><br>
+                           <input id="confirmCost" type="button" value="Confirm Price">
+                           <span id="Bitcoin-Cash-equivalent"></span><br>
+                        </div>
+                        <div style="display: none;" id="Stellar-Lumens">
+                            <input id="Stellar-Lumens-amount" name="Stellar-Lumens-deposit" placeholder="How much Stellar-Lumens are you exchanging?" /><br>
+                            <input id="confirmCost" type="button" value="Confirm Price">
+                            <span id="Stellar-Lumens-equivalent"></span><br>
+                        </div>
+                        
+                        
+
+                        <!-- <label for="bank">Bank name</i></label><br>
+                        <select type="text" class="form-control " id="bank">
+                            <option selected>Choose</option>
+                            <option value="access">Access Bank</option>
+                        </select> -->
+                
+                <span id="error" style="color: red"></span>
+                
+                <input type="submit" id="exchange" value="SELL" disabled>
+              </form>
+            <!-- <button id="addWallet"> + Add Wallet</button> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="https://js.paystack.co/v1/inline.js"></script>  
+  <script type="text/javascript" src="./js/paystack.js"></script>
+
+  <script type="text/javascript"  src="./js/dashboard.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script type="text/javascript"  src="./js/Sell.js"></script>
+  <script type="text/javascript"  src="./js/idle.js"></script>
+  
+  
+</body>
+</html>

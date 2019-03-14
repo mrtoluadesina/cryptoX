@@ -19,8 +19,10 @@ $('form#register').submit(e => {
       url: `http://localhost:3000/users?username=${username}`,
       data: {get_param: 'value'}
     }).done(data => {
+      var accountNumber = Math.floor(1000000000 + Math.random() * 9000000000);
+      console.log(accountNumber)
       console.log(data);
-      if (data.length !== 0 ) {
+      if (data.length !== 0 && data[0].phonenumber === phonenumber) {
         swal({
           title: "User already exists on Decachain",
           text: "Want to login?",
@@ -41,16 +43,31 @@ $('form#register').submit(e => {
             "phonenumber": `${phonenumber}`,
             "username": `${username}`,
             "password": `${password}`,
-            "status": 1
+            "status": 1,
+            "accountNumber": `${accountNumber}`
           }
-        }).done(() => {
-          swal({
-            text: "Successfully created your account",
-            icon: "success",
-            button: "Now Login"
-          }).then(() => {
-            window.location.href = "./login.html";
+        }).done(data => {
+          localStorage.userId = data.id;
+          $.ajax({
+            method: "POST",
+            url: "http://localhost:3000/userWallets",
+            data: {
+              "userId": localStorage.userId,
+              "walletCurrency": "Naira",
+              "balance": "0",
+              "symbol": "NGN"
+            }
+          }).done(() => {
+              swal({
+              text: "Successfully created your account",
+              icon: "success",
+              button: "Now Login"
+            }).then(() => {
+              window.location.href = "./login.html";
+            });
           });
+          
+
         }).fail(() => {
           console.log('Network error - it is not our fault!!!')
         })

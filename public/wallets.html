@@ -16,7 +16,7 @@
       <span class="logo">d</span> <span class="logo-text">decachain</span>
     </a>
     <ul class="nav">
-      <li class="hideDesktop"><a href="/">Menu</a></li>
+      <li class="hideDesktop"><a id="menuSlide" href="javascript:void()">Menu</a></li>
       <li><a id="btcNgn" href="/"></a></li>
       <li><a id="user-info" href="./settings.html">Hi, User!</a></li>
     </ul>
@@ -25,35 +25,43 @@
     <div id="sidebar" class="aside">
       <ul>
         <li><a href="./dashboard.html"><i class="fa fa-dashboard"></i>Dashboard</a></li>
-        <li><a href="./wallets.html"><i class="fa fa-briefcase"></i>Wallets</a></li>
+        <li class="active"><a href="./wallets.html"><i class="fa fa-briefcase"></i>Wallets</a></li>
         <li><a href="./send.html"><i class="fa fa-paper-plane"></i>Send Crypto</a></li>
         <li><a href="./transactions.html"><i class="fa fa-list"></i>Transactions</a></li>
-        <li class="active"><a href="./price-alert.html"><i class="fa fa-bell"></i>Price Alert <sup>beta</sup></a></li>
+        <li><a href="./price-alert.html"><i class="fa fa-bell"></i>Price Alert <sup>beta</sup></a></li>
         <li><a href="./settings.html"><i class="fa fa-gear"></i>Settings</a></li>
         <li><a id="logout" href="./login.html"><i class="fa fa-sign-out"></i>Logout</a></li>
       </ul>
     </div>
-    <div class="main-content spa">
-      <div class="content-area flex">
-        <form id="profile" class="flex flex-col" method="">
-          <h2>Choose Currency to get Price Alert</h2>
-          <span id="notification"></span>
-          <select name="currency" id="selectCurrency">
-            <option value="" disabled>Select Currency</option>
-            <option value='Naira'>Naira</option>
-            <option value='Bitcoin'>Bitcoin</option>
-            <option value='Etherium'>Etherium</option>
-          </select>
-          <input type="submit" id="submit" value="Get Price Alert">
-        </form>
+    <div class="main-content">
+      <div class="content-area wallets flex">
+        <div id="wallet">
+            <button id="addWallet"> + Add Wallet</button>
+        </div>
       </div>
     </div>
   </section>
-  
+  <div id="add-wallet">
+    <form id="newWallet" class="flex flex-col" method="">
+      <span id="close">Close</span>
+      <h2>Add Wallet</h2>
+      <select name="currency" id="selectCurrency">
+          <option value="" disabled>Select Currency</option>
+          <option value='Naira'>Naira</option>
+          <option value='Bitcoin'>Bitcoin</option>
+          <option value='Ethereum'>Ethereum</option>
+          <option value='Ripple'>Ripple</option>
+          <option value='Bitcoin-Cash'>Bitcoin Cash</option>
+          <option value='Stellar-Lumens'>Stellar Lumens</option>
+        </select>
+      <span id="error" style="color: red"></span>
+      <input type="submit" value="Create Wallet">
+    </form>
+  </div>
   <!-- <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <script type="text/javascript"  src="./js/jquery.js"></script>
-  <script type="text/javascript"  src="./js/access.js"></script>
   <script type="text/javascript"  src="./js/dashboard.js"></script>
-  <script type="text/javascript"  src="./js/settings.js"></script>
+  <script type="text/javascript"  src="./js/wallet.js"></script>
+  <script type="text/javascript"  src="./js/exchanges.js"></script>
 </body>
 </html>
