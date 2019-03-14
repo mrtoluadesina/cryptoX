@@ -377,6 +377,7 @@ p.social-menu a i {
 }
 #wallet .card .card-top img {
   width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
 #wallet .card .card-content {
