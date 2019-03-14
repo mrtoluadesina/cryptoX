@@ -1195,6 +1195,17 @@
       "timestamp": "14/03/2019, 02:19:25",
       "currencyWallet": "Bitcoin",
       "id": 89
+    },
+    {
+      "userId": "1",
+      "transactionType": "Sell",
+      "amount": "0.003",
+      "status": "success",
+      "transactionId": "T049578855624206",
+      "reference": "083367848",
+      "timestamp": "14/03/2019, 02:23:11",
+      "currencyWallet": "Bitcoin",
+      "id": 90
     }
   ]
 }
