@@ -134,7 +134,7 @@
     {
       "userId": "1",
       "walletCurrency": "Bitcoin",
-      "balance": "0.7229640142267342",
+      "balance": "0.7231640142267342",
       "symbol": "BTC",
       "id": 3
     },
@@ -155,14 +155,14 @@
     {
       "userId": "2",
       "walletCurrency": "Bitcoin",
-      "balance": "1.3731431660186892",
+      "balance": "1.3729431660186893",
       "symbol": "BTC",
       "id": 6
     },
     {
       "userId": "2",
       "walletCurrency": "Ethereum",
-      "balance": "20300.476204123755",
+      "balance": "20301.476204123755",
       "symbol": "ETH",
       "id": 7
     },
@@ -176,7 +176,7 @@
     {
       "userId": "1",
       "walletCurrency": "Ethereum",
-      "balance": "38736.567039035974",
+      "balance": "38735.567039035974",
       "symbol": "ETH",
       "id": 9
     },
@@ -994,6 +994,54 @@
       "timestamp": "3/13/2019, 3:55:03 PM",
       "currencyWallet": "Naira",
       "id": 72
+    },
+    {
+      "userId": "2",
+      "userWalletId": "6",
+      "transactionType": "Send",
+      "amount": "0.0002",
+      "status": "success",
+      "transactionId": "T300063402230759",
+      "reference": "983183857",
+      "timestamp": "3/14/2019, 10:19:22 AM",
+      "currencyWallet": "Bitcoin",
+      "id": 73
+    },
+    {
+      "userId": "1",
+      "userWalletId": "3",
+      "transactionType": "Received",
+      "amount": "0.0002",
+      "status": "success",
+      "transactionId": "T558423522063923",
+      "reference": "849580654",
+      "timestamp": "3/14/2019, 10:19:22 AM",
+      "currencyWallet": "Bitcoin",
+      "id": 74
+    },
+    {
+      "userId": "1",
+      "userWalletId": "9",
+      "transactionType": "Send",
+      "amount": "1",
+      "status": "success",
+      "transactionId": "T937283897893618",
+      "reference": "380601382",
+      "timestamp": "14/03/2019, 10:37:49",
+      "currencyWallet": "Ethereum",
+      "id": 75
+    },
+    {
+      "userId": "2",
+      "userWalletId": "7",
+      "transactionType": "Received",
+      "amount": "1",
+      "status": "success",
+      "transactionId": "T168592717577516",
+      "reference": "895210645",
+      "timestamp": "14/03/2019, 10:37:49",
+      "currencyWallet": "Ethereum",
+      "id": 76
     }
   ]
 }
