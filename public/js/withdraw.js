@@ -46,6 +46,7 @@ e.preventDefault();
         localStorage.timestamp = (new Date).toLocaleString('en-GB');
         if(balance >= amt){
             balance-=amt;
+            balance = balance.toFixed(2);
             console.log(balance);
 
             $.each(data, (index, el) => {

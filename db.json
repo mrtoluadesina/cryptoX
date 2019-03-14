@@ -120,7 +120,7 @@
     {
       "userId": "1",
       "walletCurrency": "Naira",
-      "balance": "318822.58",
+      "balance": "1499990.88",
       "symbol": "NGN",
       "id": 1
     },
@@ -134,7 +134,7 @@
     {
       "userId": "1",
       "walletCurrency": "Bitcoin",
-      "balance": "0.7231640142267342",
+      "balance": "0.5231940142267342",
       "symbol": "BTC",
       "id": 3
     },
@@ -148,7 +148,7 @@
     {
       "userId": "1",
       "walletCurrency": "Bitcoin-Cash",
-      "balance": "111664.56",
+      "balance": "111664.80213",
       "symbol": "BCH",
       "id": 5
     },
@@ -1056,6 +1056,85 @@
       "timestamp": "14/03/2019, 10:37:49",
       "currencyWallet": "Ethereum",
       "id": 76
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Withdraw",
+      "amount": "18822",
+      "status": "success",
+      "transactionId": "T413940048766232",
+      "reference": "972842626",
+      "timestamp": "14/03/2019, 02:56:09",
+      "currencyWallet": "Naira",
+      "id": 77
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "500000",
+      "status": "success",
+      "transactionId": "T214228650986474",
+      "reference": "129855001",
+      "timestamp": "14/03/2019, 02:56:35",
+      "id": 78
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Withdraw",
+      "amount": "50000.58",
+      "status": "success",
+      "transactionId": "T049566314508271",
+      "reference": "143361683",
+      "timestamp": "14/03/2019, 02:58:55",
+      "currencyWallet": "Naira",
+      "id": 79
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "500000",
+      "status": "success",
+      "transactionId": "T602832032953152",
+      "reference": "129856298",
+      "timestamp": "14/03/2019, 02:59:15",
+      "id": 80
+    },
+    {
+      "userId": "1",
+      "userWalletId": "1",
+      "transactionType": "Deposit",
+      "amount": "250000",
+      "status": "success",
+      "transactionId": "T137561934002970",
+      "reference": "129857588",
+      "timestamp": "14/03/2019, 03:01:42",
+      "id": 81
+    },
+    {
+      "userId": "1",
+      "transactionType": "Buy",
+      "amount": "705180",
+      "status": "success",
+      "transactionId": "T721366237233574",
+      "reference": "841028548",
+      "timestamp": "14/03/2019, 03:02:25",
+      "currencyWallet": "Bitcoin",
+      "id": 82
+    },
+    {
+      "userId": "1",
+      "transactionType": "Sell",
+      "amount": "0.5",
+      "status": "success",
+      "transactionId": "T624121465697812",
+      "reference": "034830778",
+      "timestamp": "14/03/2019, 03:03:14",
+      "currencyWallet": "Bitcoin",
+      "id": 83
     }
   ]
 }
