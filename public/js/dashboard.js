@@ -31,7 +31,6 @@ $('#menuSlide').click(e => {
   
 })
 $(document).ready(function(e){
-  console.log('data');
   $.ajax({
     type: 'GET',
     headers: {

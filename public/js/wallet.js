@@ -9,8 +9,6 @@ $(document).ready(() => {
       // $('#wallet').append(`<button id="addWallet"> + Add Wallet</button>`);
     } else {
       $.each(data, (index, el) => {
-        console.log('el');
-        console.log(el);
         $('#wallet').append(`
           <div class="card">
             <div class="card-top">
