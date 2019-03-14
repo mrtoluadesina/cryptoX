@@ -2,7 +2,7 @@ $(document).ready(() => {
   var userId = localStorage.userId;
   $.ajax({
     method: "GET",
-    url: `http://localhost:3000/users?id=${userId}`,
+    url: `${baseUrl}users?id=${userId}`,
     data: { get_param: 'value'}
   }).done(data => {
     $('#user-profile').text(`${data[0].username}'s profile`);
@@ -23,7 +23,7 @@ $(document).ready(() => {
       if( phonenumber ) {
         $.ajax({
           method: "PUT",
-          url: `http://localhost:3000/users/${userId}`,
+          url: `${baseUrl}users/${userId}`,
           data: {
             "firstname": `${firstname}`,
             "lastname": `${lastname}`,
@@ -63,7 +63,7 @@ $(document).ready(() => {
         if (willDelete) {
           $.ajax({
             method: "PUT",
-            url: `http://localhost:3000/users/${userId}`,
+            url: `${baseUrl}users/${userId}`,
             data: {
               "firstname": `${data[0].firstname}`,
               "lastname": `${data[0].lastname}`,
@@ -87,7 +87,7 @@ $(document).ready(() => {
       });
       // $.ajax({
       //   method: "PUT",
-      //   url: `http://localhost:3000/users/${userId}`,
+      //   url: `${baseUrl}users/${userId}`,
       //   data: {
       //     "firstname": `${data[0].firstname}`,
       //     "lastname": `${data[0].lastname}`,

@@ -2,7 +2,7 @@ $(document).ready(() => {
   var userId = localStorage.userId;
   $.ajax({
     method: "GET",
-    url: `http://localhost:3000/userWallets?userId=${userId}`,
+    url: `${baseUrl}userWallets?userId=${userId}`,
     data: { get_param: 'value'}
   }).done(data => {
     if (data.length === 0) {
@@ -46,12 +46,12 @@ $('#newWallet').submit(e => {
   if (currency) {
     $.ajax({
       method: "GET",
-      url: `http://localhost:3000/wallets?currency=${currency}`,
+      url: `${baseUrl}wallets?currency=${currency}`,
       data: { get_param: 'value' }
     }).done(data => {
       $.ajax({
         method: "POST",
-        url: `http://localhost:3000/userWallets`,
+        url: `${baseUrl}userWallets`,
         data: {
           "userId": `${userId}`,
           "walletCurrency": `${currency}`,
@@ -81,7 +81,7 @@ function retrieve(){
   if (transaction == 1) {
     $.ajax({
         method: "GET",
-        url: `http://localhost:3000/userWallets?userId=${userId}`,
+        url: `${baseUrl}userWallets?userId=${userId}`,
         data: {get_param: 'value'}
       }).done((data) => {
         $.each(data, (index, el) => {
@@ -90,7 +90,7 @@ function retrieve(){
             // Update the Wallet
             $.ajax({
               method: "PUT",
-              url: `http://localhost:3000/userWallets/${userId}`,
+              url: `${baseUrl}userWallets/${userId}`,
               data: {
                 "userId": `${userId}`,
                 "walletCurrency": `${el.walletCurrency}`,
@@ -102,7 +102,7 @@ function retrieve(){
               //Update the records
                 $.ajax({
                 method: "POST",
-                url: "http://localhost:3000/transactions",
+                url: `${baseUrl}transactions`,
                 data: {
                   "userId": `${userId}`,
                   "userWalletId": 1,

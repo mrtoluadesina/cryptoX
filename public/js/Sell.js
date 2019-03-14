@@ -7,7 +7,7 @@ var apiCon;
 $('#currBought').text(localStorage.currencyClicked);
 $.ajax({
     method: 'GET',
-    url: `http://localhost:3000/userWallets?userId=${userId}`,
+    url: `${baseUrl}userWallets?userId=${userId}`,
     data: {get_param: 'value'}
 }).done((data) => {
     $.each(data, (index, el) => {
@@ -221,7 +221,7 @@ function transactSell(selector,selector1){
     $('#loader').show();
     $.ajax({
         method: 'GET',
-        url: `http://localhost:3000/userWallets?userId=${userId}&walletCurrency=${selected}`,
+        url: `${baseUrl}userWallets?userId=${userId}&walletCurrency=${selected}`,
         data: { get_param: 'value'}
     }).done(data => {
         console.log('datap');
@@ -261,7 +261,7 @@ function transactSell(selector,selector1){
                     if(localStorage.walletCurrency === selected){
                         $.ajax({
                             method: "PUT",
-                            url: `http://localhost:3000/userWallets/${walletId}`,
+                            url: `${baseUrl}userWallets/${walletId}`,
                             data: {
                             "userId": `${userId}`,
                             "walletCurrency": `${localStorage.walletCurrency}`,
@@ -271,7 +271,7 @@ function transactSell(selector,selector1){
                         }).done(() => {
                             $.ajax({
                                 method: 'GET',
-                                url: `http://localhost:3000/userWallets?userId=${userId}&walletCurrency=${curr}`,
+                                url: `${baseUrl}userWallets?userId=${userId}&walletCurrency=${curr}`,
                                 data: { get_param: 'value' }
                             }).done(data => {
                                 console.log('datar');
@@ -284,7 +284,7 @@ function transactSell(selector,selector1){
                                 // console.log(currId);
                                 $.ajax({
                                     method: 'PUT',
-                                    url: `http://localhost:3000/userWallets/${currId}`,
+                                    url: `${baseUrl}userWallets/${currId}`,
                                     data: {
                                         "userId": `${userId}`,
                                         "walletCurrency": `${localStorage.selectedCurrency}`,
@@ -299,7 +299,7 @@ function transactSell(selector,selector1){
 
                                     $.ajax({
                                         method: "POST",
-                                        url: "http://localhost:3000/transactions",
+                                        url: `${baseUrl}transactions`,
                                         data: {
                                           "userId": `${userId}`,
                                           "userWalletId": localStorage.id,

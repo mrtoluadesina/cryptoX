@@ -2,7 +2,7 @@ $(document).ready(function(e){
     var userId = localStorage.userId;
     $.ajax({
         method: 'GET',
-        url:  `http://localhost:3000/transactions?userId=${userId}`,
+        url:  `${baseUrl}transactions?userId=${userId}`,
         data: {get_param: 'value'}
     }).done(data => {
         data1 = data;

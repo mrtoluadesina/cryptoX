@@ -16,7 +16,7 @@ $('form#register').submit(e => {
   if( email && phonenumber && username && password ) {
     $.ajax({
       method: "GET",
-      url: `http://localhost:3000/users?username=${username}`,
+      url: `${baseUrl}users?username=${username}`,
       data: {get_param: 'value'}
     }).done(data => {
       var accountNumber = Math.floor(1000000000 + Math.random() * 9000000000);
@@ -35,7 +35,7 @@ $('form#register').submit(e => {
       } else {
         $.ajax({
           method: "POST",
-          url: "http://localhost:3000/users",
+          url: `${baseUrl}users`,
           data: {
             "email": `${email}`,
             "phonenumber": `${phonenumber}`,
@@ -48,7 +48,7 @@ $('form#register').submit(e => {
           localStorage.userId = data.id;
           $.ajax({
             method: "POST",
-            url: "http://localhost:3000/userWallets",
+            url: `${baseUrl}userWallets`,
             data: {
               "userId": localStorage.userId,
               "walletCurrency": "Naira",
@@ -84,7 +84,7 @@ $('form#register').submit(e => {
 //   if( email && phonenumber && username && password ) {
 //     $.ajax({
 //       method: "POST",
-//       url: "http://localhost:3000/users",
+//       url: `${baseUrl}users`,
 //       data: {
 //         "email": `${email}`,
 //         "phonenumber": `${phonenumber}`,
@@ -112,7 +112,7 @@ $('form#login').submit(e => {
   if( username && password ) {
     $.ajax({
       method: 'GET',
-      url: `http://localhost:3000/users?username=${username}`,
+      url: `${baseUrl}users?username=${username}`,
       data: { get_param: 'value' }
     }).done(data => {
       if (data.length === 0) {
