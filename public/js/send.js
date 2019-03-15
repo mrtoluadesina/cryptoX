@@ -30,6 +30,7 @@ function transactionDetails(){
     });
     $('form#sendCrypto').submit(e => {
       e.preventDefault();
+      $('#loader').show();
       var currencyType = $('#currencyType').val();
       var accountNumber = $('#accountNo').val();
       var amountToSend = $('#amountToSend').val();
@@ -49,6 +50,7 @@ function transactionDetails(){
             }).done(data => {
               localStorage.receiverWallet = data[0].id;
               localStorage.receiverBalance = data[0].balance;
+              $('#loader').hide();
               swal({
                 title: "Confirm Amount to send",
                 text: `You are about to send ${localStorage[currencyType + '-symbol']} ${amountToSend}`,
@@ -56,6 +58,7 @@ function transactionDetails(){
                 buttons: [true, "Send"]
               }).then( willSend => {
                 if (willSend) {
+                  $('#loader').show();
                   localStorage[currencyType] = Number(localStorage[currencyType]) - Number(amountToSend);
                   $.ajax({
                     method: 'PUT',
@@ -150,6 +153,7 @@ function transactionDetails(){
                       }).then(() => {
                         localStorage.clear();
                         localStorage.userId = userId;
+                        $('#loader').hide();
                         location.href = './wallets.html';
                       })
                     })
