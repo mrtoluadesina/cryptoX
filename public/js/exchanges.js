@@ -265,7 +265,7 @@ function transactBuy(selector,selector1){
                                             text: "Purchase Successful",
                                             icon: "success"
                                         }).then (() => {  
-                                        location.href = "./wallets.html";
+                                          localStorage.pageBackTo !== undefined ? location.href = localStorage.pageBackTo : location.href = "./wallets.html";
                                         })
                                     });
                                 })
