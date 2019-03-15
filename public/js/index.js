@@ -12,6 +12,7 @@ $('form#homeForm').submit(e => {
       localStorage.currencyToExchangeSymbol = data.symbol;
     })
   if (currency && amount) {
+    localStorage.pageTo = './wallets.html';
     window.location.href = './exchange.html';
   }
 });
@@ -30,7 +31,6 @@ $(document).ready(() => {
     var bitPrice = Number(amount / 365).toFixed(2);
     var btcngn = Number(bitPrice / data.price).toFixed(6);
     localStorage.currencyToPayFor = btcngn;
-    localStorage.pageTo = './wallets.html';
       $('#amountToAdd').text(`BTC/NGN ${btcngn}`);
   });
 })
