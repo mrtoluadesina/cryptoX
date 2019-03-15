@@ -510,6 +510,9 @@ p.social-menu a i {
 .no-border {
   border: 0px !important;
 }
+.no-padding {
+  padding: 0px !important;
+}
 .bKdvXj {
   max-width: 370px !important;
 }
