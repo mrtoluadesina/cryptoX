@@ -167,7 +167,7 @@ function transactionDetails(){
               localStorage.currencyClickedBalance = localStorage[currencyType];
               localStorage.currencyClickedSymbol = localStorage[currencyType + '-symbol'];
               localStorage.pageBackTo = './send.html'
-              location.href = './buy.html'
+              location.href = './Buy.html'
             })
           }
           })
