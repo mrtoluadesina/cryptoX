@@ -544,6 +544,9 @@ p.social-menu a i {
   .hideDesktop {
     display: none;
   }
+  #mobile-nav {
+		display: none;
+	}
   #mobile-nav-toggle {
 		display: none;
 	}
