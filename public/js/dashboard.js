@@ -66,7 +66,6 @@ if ($('#sidebar').length) {
     $('body').toggleClass('mobile-nav-active');
     $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
     $('#mobile-body-overly').toggle();
-    $('#search-toggle, #myBtn2').toggle();
   });
 
   $(document).click(function(e) {
@@ -76,7 +75,6 @@ if ($('#sidebar').length) {
         $('body').removeClass('mobile-nav-active');
         $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
         $('#mobile-body-overly').fadeOut();
-        $('#search-toggle, #myBtn2').toggle();
       }
     }
   });
