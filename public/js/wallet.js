@@ -41,7 +41,7 @@ $('#newWallet').submit(e => {
   e.preventDefault();
   var currency = $('#selectCurrency').val(),
       userId = localStorage.userId;
-  if (currency) {
+  if (currency && currency !== 'Naira') {
     $.ajax({
       method: "GET",
       url: `${baseUrl}wallets?currency=${currency}`,
@@ -88,11 +88,12 @@ function retrieve(){
       }).done((data) => {
         $.each(data, (index, el) => {
           if(el.walletCurrency === 'Naira') {
+            var walletId = el.id;
             amount += parseFloat(el.balance);
             // Update the Wallet
             $.ajax({
               method: "PUT",
-              url: `${baseUrl}userWallets/${userId}`,
+              url: `${baseUrl}userWallets/${walletId}`,
               data: {
                 "userId": `${userId}`,
                 "walletCurrency": `${el.walletCurrency}`,
