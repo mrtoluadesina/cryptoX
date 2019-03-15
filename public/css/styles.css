@@ -288,6 +288,18 @@ input[type='submit'] {
   text-transform: uppercase;
   cursor: pointer;
 }
+.content-area form label {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-top: .45rem;
+  color: #7f7f7f;
+}
+.content-area form input {
+  margin-top: 0px;
+}
+.content-area form input[type='text'] {
+  width: 100%;
+}
 #add-wallet form input[type='submit'] {
   border: 1px solid #604684;
   border-radius: 5px;
