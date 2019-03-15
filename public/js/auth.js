@@ -9,6 +9,7 @@ $('#confirm_password').keyup(e => {
 })
 $('form#register').submit(e => {
   e.preventDefault();
+  $('#loader').show();
   var email = $('#email').val(),
       phonenumber = $('#phonenumber').val(),
       username = $('#username').val(),
@@ -75,6 +76,7 @@ $('form#register').submit(e => {
               icon: "success",
               button: "Login"
             }).then(() => {
+              $('#loader').hide();
               localStorage.pageTo = './settings.html'
               window.location.href = "./login.html";
             }); 
