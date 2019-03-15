@@ -17,6 +17,7 @@ $(document).ready(() => {
     data: { get_param: 'value' }
   }).done(data => {
     $('#walletAddy').text(`Key: ${data[0].accountNumber}`)
+    $('#accountKey').text(`Key: ${data[0].accountNumber}`)
   });
   $.ajax({
     method: "GET",
