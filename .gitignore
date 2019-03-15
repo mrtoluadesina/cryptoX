@@ -4,3 +4,4 @@ public/js/.DS_Store
 .~db.json
 node_modules/
 db.json
+public/domain.js
