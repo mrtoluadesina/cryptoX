@@ -55,14 +55,14 @@
     {
       "userId": "1",
       "walletCurrency": "Naira",
-      "balance": "1500",
+      "balance": "1000",
       "symbol": "NGN",
       "id": 1
     },
     {
       "userId": "1",
       "walletCurrency": "Bitcoin",
-      "balance": "0",
+      "balance": "0.00035",
       "symbol": "BTC",
       "id": 2
     }
@@ -107,6 +107,17 @@
       "reference": "130303422",
       "timestamp": "15/03/2019, 01:28:49",
       "id": 2
+    },
+    {
+      "userId": "1",
+      "transactionType": "Buy",
+      "amount": "500",
+      "status": "success",
+      "transactionId": "T555000951923805",
+      "reference": "978597784",
+      "timestamp": "15/03/2019, 06:27:03",
+      "currencyWallet": "Bitcoin",
+      "id": 3
     }
   ]
 }
