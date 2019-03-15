@@ -209,6 +209,7 @@ function transactBuy(selector,selector1){
                 $('#loader').hide();
                 $('#exchange').click((e) =>{
                     e.preventDefault();
+                    $('#loader').show();
                     var curr = localStorage.currencyClicked;
                     var x = Number(localStorage.currentBalance) - val;
                     var walletId = localStorage.walletId;
@@ -265,6 +266,7 @@ function transactBuy(selector,selector1){
                                             text: "Purchase Successful",
                                             icon: "success"
                                         }).then (() => {  
+                                          $('#loader').hide()
                                           localStorage.pageBackTo !== undefined ? location.href = localStorage.pageBackTo : location.href = "./wallets.html";
                                         })
                                     });
