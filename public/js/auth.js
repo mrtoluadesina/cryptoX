@@ -42,7 +42,6 @@ $('form#register').submit(e => {
             "email": `${email}`,
             "phonenumber": `${phonenumber}`,
             "username": `${username}`,
-            // "password": `${password}`,
             "password": `${encryptedPassword}`,
             "status": 1,
             "accountNumber": `${accountNumber}`
@@ -71,16 +70,20 @@ $('form#register').submit(e => {
             }).then( () => {
 
             });
-              swal({
-                text: "Successfully created your account",
-                icon: "success",
-                button: "Login"
-              }).then(() => {
+            swal({
+              text: "Successfully created your account",
+              icon: "success",
+              button: "Login"
+            }).then(() => {
+              localStorage.pageTo = './settings.html'
               window.location.href = "./login.html";
             }); 
           });
         }).fail(() => {
-          console.log('Network error - it is not our fault!!!')
+          swal({
+            text: 'Network error - it is not our fault!!!',
+            icon: 'danger'
+          })
         })
       }
     }).fail(() => {

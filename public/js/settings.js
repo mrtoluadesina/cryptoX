@@ -47,7 +47,10 @@ $(document).ready(() => {
             window.location.href = "./dashboard.html";
           });
         }).fail(() => {
-          console.log('Network error - it is your fault!!!');
+          swal({
+            text: 'Network error - it is your fault!!!',
+            icon: 'danger'
+          });
         })
       }
     });

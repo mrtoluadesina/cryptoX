@@ -59,14 +59,19 @@ $('#newWallet').submit(e => {
       }).done(() => {
         window.location.href = "./wallets.html";
       }).fail(() => {
-        console.log('Data no enter');
+        swal({
+          text: 'Data no enter',
+          icon: 'danger'
+        });
       })
     }).fail(() => {
-      console.log('not gotten');
+      swal({
+        text: 'not gotten',
+        icon: 'danger'
+      });
     })
   }
 })
-
 
 function retrieve(){
   var obj = JSON.parse(localStorage.res);
@@ -74,7 +79,6 @@ function retrieve(){
   var userId = localStorage.userId;
   var transaction = localStorage.transaction;
   var timestamp = localStorage.timestamp;
-  console.log(obj);
 
   if (transaction == 1) {
     $.ajax({
@@ -96,7 +100,6 @@ function retrieve(){
                 "symbol": `${el.symbol}`
               }
             }).done(() => {
-              console.log('done!');
               //Update the records
                 $.ajax({
                 method: "POST",
@@ -114,8 +117,6 @@ function retrieve(){
               }).done(() => {
                 window.location.href("./wallets.html")
               });
-            
-
             })
           }
         })

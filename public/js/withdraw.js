@@ -31,23 +31,18 @@ userId = localStorage.userId;
 
 $('#newWithdraw').submit(function(e){
 e.preventDefault();
-// if(withdraw_currency === 1){
-
-// }
         $.ajax({
         method: "GET",
         url: `${baseUrl}userWallets?userId=${userId}&walletCurrency=Naira`,
         data: { get_param: 'value'}
     }).done(data => {    
         balance = parseFloat(data[0].balance);
-        console.log(balance);
         var amt = $('#naira-amount').val();
         localStorage.amount = amt;
         localStorage.timestamp = (new Date).toLocaleString('en-GB');
         if(balance >= amt){
             balance-=amt;
             balance = balance.toFixed(2);
-            console.log(balance);
 
             $.each(data, (index, el) => {
                 if(el.walletCurrency === 'Naira') {
@@ -61,23 +56,18 @@ e.preventDefault();
                       "symbol": `${el.symbol}`
                     }
                   }).done(() => {
-                    console.log('done!')
 
                     var trxref = "T";
                     //Generate Transaction ID
                     for(var i=1;i<=15+(Math.trunc( Math.random()));i++){
                         trxref += Math.trunc(10 * (Math.random()));
                     }
-                    console.log(trxref);
                     
                     var ref = "";
                     //Generate Reference #
                     for(var i=1;i<=9;i++){
                         ref += Math.trunc(10 * (Math.random()));
                     }
-                    console.log(ref);
-
-
                     $.ajax({
                         method: "POST",
                         url: `${baseUrl}transactions`,
@@ -108,33 +98,11 @@ e.preventDefault();
 
         }
         else{
-            alert('You do not have sufficient funds for withdrawal')
+            swal({
+              text: 'You do not have sufficient funds for withdrawal',
+              icon: 'warning'
+            })
         }
-        console.log(data);
-        console.log(balance);
-           
-    /*  if (data.length === 0) {
-        // $('#wallet').append(`<button id="addWallet"> + Add Wallet</button>`);
-        } else {
-        $.each(data, (index, el) => {
-            $('#wallet').append(`
-            <div class="card">
-                <div class="card-top">
-                <span class="walletName">${el.walletCurrency} Wallet</span>
-                <img class="walletLogo" src="./img/${el.symbol}.png" alt="naira">
-                </div>
-                <div class="card-content">
-                <p>Balance: ${el.symbol} ${el.balance}</p>
-                </div>
-                <div class="card-bottom">
-                <a class="${el.walletCurrency}-${el.walletCurrency === 'Naira' ? 'Withdraw' : 'Buy' }" href="${el.walletCurrency}-${el.walletCurrency === 'Naira' ? 'Withdraw' : 'Buy' }.html">${el.walletCurrency === 'Naira' ? 'Withdraw' : 'Buy' }</a>
-                <a class="${el.walletCurrency}-${el.walletCurrency === 'Naira' ? 'Deposit' : 'Sell' }" href="${el.walletCurrency}-${el.walletCurrency === 'Naira' ? 'Deposit' : 'Sell' }.html">${el.walletCurrency === 'Naira' ? 'Deposit' : 'Sell' }</a>
-                </div>
-            </div>
-            `);
-            $('#selectCurrency option[value="' + el.walletCurrency + '"]').attr('disabled', 'disabled')
-        });
-        } */
     });
 });
 

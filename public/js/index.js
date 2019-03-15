@@ -32,8 +32,6 @@ $(document).ready(() => {
     localStorage.currencyToPayFor = btcngn;
     localStorage.pageTo = './wallets.html';
       $('#amountToAdd').text(`BTC/NGN ${btcngn}`);
-    console.log('data');
-    console.log(data);
   });
 })
 $('#xAddFunds').click(e => {
@@ -44,13 +42,5 @@ $('#xAddFunds').click(e => {
   } else {
     localStorage.pageTo = './wallets.html';
     window.location.href = './login.html';
-    // var userId = localStorage.userId
-    // $.ajax({
-    //   method: "GET",
-    //   url: `${baseUrl}users/${userId}`,
-    //   data: { get_param: 'value' }
-    // }).done(data => {
-    //   window.location.href = './wallets.html'
-    // })
   }
 })
