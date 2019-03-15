@@ -73,7 +73,6 @@ $('#newWallet').submit(e => {
   }
 })
 
-
 function retrieve(){
   var obj = JSON.parse(localStorage.res);
   var amount = Number(localStorage.amount);
