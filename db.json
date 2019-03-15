@@ -65,6 +65,13 @@
       "balance": "0.00035",
       "symbol": "BTC",
       "id": 2
+    },
+    {
+      "userId": "1",
+      "walletCurrency": "Ethereum",
+      "balance": "0",
+      "symbol": "ETH",
+      "id": 3
     }
   ],
   "transactionType": [
